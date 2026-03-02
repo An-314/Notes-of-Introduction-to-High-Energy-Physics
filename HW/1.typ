@@ -64,11 +64,13 @@
     #three-line-table[
       | 介子 | 质量 (MeV/$c^2$) |
       | --- | --- |
-      | $pi^0$ | 135.0 |
-      | $pi^plus.minus$ | 139.6 |
+      | $pi$ | 138 |
       | 汤川介子 | 98.67 |
     ]
   ]
+  $
+    m_pi/m_"汤川" approx 1.4
+  $
   数量级上，汤川介子的质量与$pi$介子相当，这表明这个估计方法在某种程度上是合理的。然而，正如评述中所指出的，这个方法并不是严格的推导，而是一个粗略的估计。
 ]
 
@@ -94,12 +96,12 @@
   $
   从而
   $
-    Delta p_min tilde 100 "MeV/"c
+    Delta p_min tilde 98.67 "MeV/"c
   $
   #newpara()
   对应能量给出，因此若电子真在核内“游荡”，它的典型能量应是
   $
-    E = sqrt((Delta p c)^2 + (m_e c^2)^2) tilde sqrt((100 "MeV")^2 + (0.511 "MeV")^2) tilde 100 "MeV"
+    E = sqrt((Delta p c)^2 + (m_e c^2)^2) tilde sqrt((98.67 "MeV")^2 + (0.511 "MeV")^2) tilde 98.67 "MeV"
   $
   #newpara()
   氚$beta^-$衰变的电子端点能量只有约
