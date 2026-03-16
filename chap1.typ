@@ -4,12 +4,15 @@
 #import "@preview/inknertia:0.1.0": feynman
 #import feynman: *
 
+#show figure: set block(breakable: true)
+
 #let t-r(it) = text(fill: red)[#it]
 #let t-g(it) = text(fill: green)[#it]
 #let t-b(it) = text(fill: blue)[#it]
 #let t-r-inv(it) = text(fill: rgb(0%, 100%, 100%))[#it]
 #let t-g-inv(it) = text(fill: rgb(100%, 0%, 100%))[#it]
 #let t-b-inv(it) = text(fill: rgb(100%, 100%, 0%))[#it]
+
 = 基本粒子物理历史介绍
 
 == 经典时代（1897-1932）
