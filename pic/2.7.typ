@@ -1,0 +1,91 @@
+#import "@preview/inknertia:0.1.0": feynman
+#import feynman: *
+
+#grid(columns: (1fr, 1fr))[
+  #feynman(
+    // layout: "layered",
+    // orientation: "vertical",
+    length: 0.3cm,
+    (
+      vertex("i1"),
+      vertex("i2"),
+      vertex("a", shape: "dot"),
+      vertex("b", shape: "dot"),
+      vertex("c", shape: "dot"),
+      vertex("d", shape: "dot"),
+      vertex("f1"),
+      vertex("f2"),
+      edge("i1", "a", type: "antifermion"),
+      edge("a", "b", type: "antifermion"),
+      edge("i2", "b", type: "fermion"),
+      edge("a", "c", type: "photon"),
+      edge("b", "d", type: "photon"),
+      edge("c", "f1", type: "fermion"),
+      edge("c", "d", type: "antifermion"),
+      edge("d", "f2", type: "antifermion"),
+    ),
+  )][#feynman(
+  length: 0.3cm,
+  (
+    vertex("e1"),
+    vertex("e2"),
+    vertex("e3"),
+    vertex("e4"),
+    vertex("a", shape: "dot"),
+    edge("e1", "a", type: "fermion"),
+    edge("e2", "a", type: "antifermion"),
+    edge("a", "b", type: "photon"),
+    loop(
+      (vertex("c"), (type: "fermion")),
+      (vertex("b"), (type: "fermion")),
+    ),
+    vertex("d", shape: "dot"),
+    edge("c", "d", type: "photon"),
+    edge("d", "e3", type: "fermion"),
+    edge("d", "e4", type: "antifermion"),
+  ),
+)][#feynman(
+  length: 0.3cm,
+  (
+    vertex("e1"),
+    vertex("e2"),
+    vertex("a", shape: "dot"),
+    vertex("b", shape: "dot"),
+    edge("a", "b", type: "photon"),
+    edge("e1", "a", type: "fermion"),
+    edge("e2", "b", type: "antifermion"),
+    edge("a", "c", type: "fermion"),
+    edge("b", "c", type: "antifermion"),
+    vertex("c", shape: "dot"),
+    vertex("d", shape: "dot"),
+    edge("c", "d", type: "photon"),
+    vertex("e3"),
+    vertex("e4"),
+    edge("d", "e3", type: "fermion"),
+    edge("d", "e4", type: "antifermion"),
+  ),
+)][
+  #feynman(
+    length: 0.3cm,
+    (
+      vertex("e1"),
+      vertex("e2"),
+      vertex("a", shape: "dot"),
+      vertex("b", shape: "dot"),
+      vertex("c", shape: "dot"),
+      edge("e1", "c", type: "antifermion"),
+      edge("e2", "a", type: "fermion"),
+      loop(
+        (vertex("a"), (type: "photon")),
+        (vertex("b"), (type: "fermion")),
+      ),
+      edge("b", "c", type: "fermion"),
+      vertex("d", shape: "dot"),
+      vertex("e3"),
+      vertex("e4"),
+      edge("c", "d", type: "photon"),
+      edge("d", "e3", type: "fermion"),
+      edge("d", "e4", type: "antifermion"),
+    ),
+  )
+]

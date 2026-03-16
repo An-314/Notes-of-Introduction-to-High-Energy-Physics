@@ -14,5 +14,7 @@
 
 #include "chap1.typ"
 #pagebreak()
+#include "chap2.typ"
+#pagebreak()
 #outline(target: figure, title: [图表目录])
 
