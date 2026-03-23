@@ -732,11 +732,19 @@ $
     $
       phi(s macron(s)) -> pi^+(u macron(d)) + pi^-(d macron(u)) + pi^0((u macron(u) - d macron(d))/sqrt(2))
     $
+    #figure(
+      image("pic/builds/2.35.pdf"),
+      caption: [$phi -> 3pi$的Feynman图示例],
+    )
     湮灭后，在真空中产生三对夸克，这个过程是强相互作用的典型衰变
   - $omega -> 3pi$
     $
       omega((u macron(u) + d macron(d))/sqrt(2)) -> pi^+(u macron(d)) + pi^-(d macron(u)) + pi^0((u macron(u) - d macron(d))/sqrt(2))
     $
+    #figure(
+      image("pic/builds/2.36.pdf"),
+      caption: [$omega -> 3pi$的Feynman图示例],
+    )
     在真空中产生两对夸克，要比$phi -> 3pi$更容易发生，所以$omega$的宽度更大
 
   一般情况下，质量越大，衰变的相空间越大，可能性也越多，宽度应该越大。
@@ -751,8 +759,16 @@ $
 
 *$J\/psi$衰变*
 - $J\/psi$粒子到$3pi$的衰变过程
+  #figure(
+    image("pic/builds/2.37.pdf"),
+    caption: [$J\/psi$到$3pi$的衰变过程示例],
+  )
   - 这个过程被被OZI规则抑制，这个衰变难以发生
 - $J\/psi$粒子到$D$的衰变过程
+  #figure(
+    image("pic/builds/2.38.pdf"),
+    caption: [$J\/psi$到$D$的衰变过程示例],
+  )
   - $J\/psi$太轻，无法直接衰变到$D$介子；宽度为0.076MeV
   - $psi(3770)$质量高，可以直接衰变到$D$介子；宽度为24MeV
   - $J\/psi$的奇特之处
