@@ -24,16 +24,24 @@ MAIN_PDF := $(BUILD_DIR)/main.pdf
 
 CHAPS := $(wildcard chap*.typ)
 
+PIC_SRC := $(wildcard pic/*.typ)
+PIC_PDF := $(patsubst pic/%.typ,pic/builds/%.pdf,$(PIC_SRC))
+
 # HW 部分
 HW_SRC := $(wildcard HW/*.typ)
 HW_PDF := $(patsubst HW/%.typ,$(BUILD_DIR)/HW/%.pdf,$(HW_SRC))
 
 .PHONY: all clean
 
-all: $(MAIN_PDF) $(HW_PDF)
+all: $(PIC_PDF) $(MAIN_PDF) $(HW_PDF)
 
 # 编译主文档
-$(MAIN_PDF): $(MAIN_SRC) $(CHAPS)
+$(MAIN_PDF): $(MAIN_SRC) $(CHAPS) $(PIC_PDF)
+	$(call MKDIR_P,$(dir $@))
+	typst compile $< $@
+
+# 编译每个图片
+pic/builds/%.pdf: pic/%.typ
 	$(call MKDIR_P,$(dir $@))
 	typst compile $< $@
 
@@ -44,3 +52,4 @@ $(BUILD_DIR)/HW/%.pdf: HW/%.typ
 
 clean:
 	$(call RM_RF,$(BUILD_DIR))
+	$(call RM_RF,pic/builds)

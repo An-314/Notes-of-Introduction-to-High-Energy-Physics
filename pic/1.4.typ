@@ -1,3 +1,4 @@
+#set page(height: auto, width: auto, margin: 0.5cm)
 #import "@preview/cetz:0.4.2"
 #import cetz.draw as draw
 

@@ -153,7 +153,7 @@
     $
   - 三种电荷，$pi^+, pi^-, pi^0$
     #figure(
-      include "pic/1.1.typ",
+      image("pic/builds/1.1.pdf"),
       caption: [单$π$介子交换图],
     )
 - $pi$的寻找历程
@@ -458,7 +458,7 @@
   )
   - 排入图形中，$3 times 3$共有九种
     #figure(
-      include "pic/1.2.typ",
+      image("pic/builds/1.2.pdf"),
       caption: [$"SU"(3)$轻介子八重态权图——赝标介子八重态$J^P = 0^-$与矢量介子八重态$J^P = 1^-$],
     )
 - *重子排列*
@@ -480,7 +480,7 @@
       caption: [重子八重态],
     )
     #figure(
-      include "pic/1.3.typ",
+      image("pic/builds/1.3.pdf"),
       caption: [重子八重态权图],
     )
   - 三个夸克全平行，总自旋3/2，十重态
@@ -502,7 +502,7 @@
       caption: [重子十重态],
     )
     #figure(
-      include "pic/1.4.typ",
+      image("pic/builds/1.4.pdf"),
       caption: [重子十重态权图],
     )
   - 有规律的粒子谱，预示着有规律的内在结构，这将给出夸克模型的启发
@@ -540,18 +540,18 @@
 - *利用夸克模型排列*
   - 排入图形中，正反夸克各有三种
     #figure(
-      include "pic/1.5.typ",
+      image("pic/builds/1.5.pdf"),
       caption: [夸克三角形和反夸克三角形],
     )
   - 利用夸克模型排列介子八重态
 #figure(
-  include "pic/1.6.typ",
+  image("pic/builds/1.6.pdf"),
   caption: [介子八重态与夸克三角形的关系],
 )
 - 利用夸克模型排列重子十重态
   - $Omega$是在十重态中唯一一个没有被发现的粒子，Gell-Mann预言了$Omega$的存在，并且预测了它的质量，后来在实验中被发现，验证了夸克模型的正确性
 #figure(
-  include "pic/1.7.typ",
+  image("pic/builds/1.7.pdf"),
   caption: [重子十重态与夸克三角形的关系],
 )
 

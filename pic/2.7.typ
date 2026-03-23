@@ -1,7 +1,8 @@
+#set page(height: auto, width: auto, margin: 0.5cm)
 #import "@preview/inknertia:0.1.0": feynman
 #import feynman: *
 
-#grid(columns: (1fr, 1fr))[
+#stack(dir: ltr)[
   #feynman(
     // layout: "layered",
     // orientation: "vertical",
@@ -44,7 +45,8 @@
     edge("d", "e3", type: "fermion"),
     edge("d", "e4", type: "antifermion"),
   ),
-)][#feynman(
+)]
+#stack(dir: ltr)[#feynman(
   length: 0.3cm,
   (
     vertex("e1"),

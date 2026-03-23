@@ -1,3 +1,4 @@
+#set page(height: auto, width: auto, margin: 0.5cm)
 #import "@preview/cetz:0.4.2"
 #import cetz.draw as draw
 
@@ -200,7 +201,7 @@
 }
 
 // 用法
-#grid(columns: (1fr, 1fr))[
+#stack(dir: ltr)[
   #octet(scale: 1.3cm, outer_r: 10pt, inner_r: 10pt)][
   #octet-quark(scale: 1.3cm, outer_r: 10pt, inner_r: 10pt)
 ]

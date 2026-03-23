@@ -1,7 +1,8 @@
+#set page(height: auto, width: auto, margin: 0.5cm)
 #import "@preview/inknertia:0.1.0": feynman
 #import feynman: *
 
-#grid(columns: (1fr,) * 2)[
+#stack(dir: ltr)[
   #feynman(
     orientation: "vertical",
     length: 0.5cm,

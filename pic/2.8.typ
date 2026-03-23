@@ -1,7 +1,8 @@
+#set page(height: auto, width: auto, margin: 0.5cm)
 #import "@preview/inknertia:0.1.0": feynman
 #import feynman: *
 
-#grid(columns: (1fr, 1fr))[
+#stack(dir: ltr)[
   #feynman(length: 0.3cm, (
     vertex("e1", label: $d$),
     vertex("e2", label: $d$),
@@ -15,7 +16,8 @@
     edge("v2", "e3", type: "fermion"),
     edge("v2", "e4", type: "antifermion"),
   ))
-  - 只要粒子带电，就可以与光子耦合，因此不仅电子，其他夸克也一样可以画类似的 QED 顶角
+  - 只要粒子带电，就可以与光子耦合
+  - 因此不仅电子，其他夸克也一样可以画类似的 QED 顶角
   - 电磁顶角对单个Fermion的味道是守恒的
   - 光子不改变夸克的味道，只耦合到它们的电荷
 ][

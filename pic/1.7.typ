@@ -1,3 +1,4 @@
+#set page(height: auto, width: auto, margin: 0.5cm)
 #import "@preview/cetz:0.4.2"
 #import cetz.draw as draw
 
@@ -230,7 +231,7 @@
   })
 }
 // 用法
-#grid(columns: (1fr, 1fr))[
+#stack(dir: ltr)[
   #baryon_decuplet(scale: 1.5cm, outer_r: 10pt)
 ][
   #baryon_decuplet-quark(scale: 1.5cm, outer_r: 10pt)

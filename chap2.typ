@@ -160,7 +160,7 @@ $
     - 在 QED 中：一个顶点表示电子与光子相互作用
     - 电荷耦合常数$e$，满足电荷守恒
     #figure(
-      include "pic/2.1.typ",
+      image("pic/builds/2.1.pdf"),
       caption: [$e macron(e) gamma$顶点示例],
     )
     - 横向是时间轴，竖向是空间轴
@@ -177,7 +177,7 @@ $
       e^- e^- -> e^- e^-
     $
     #figure(
-      include "pic/2.2.typ",
+      image("pic/builds/2.2.pdf"),
       caption: [Møller scattering的Feynman图示例],
     )
     - 电子—电子散射
@@ -188,7 +188,7 @@ $
       e^+ e^- -> gamma + gamma
     $
     #figure(
-      include "pic/2.3.typ",
+      image("pic/builds/2.3.pdf"),
       caption: [Annihilation的Feynman图示例],
     )
     - 电子—正电子湮灭成两个光子
@@ -199,7 +199,7 @@ $
       gamma + gamma -> e^+ e^-
     $
     #figure(
-      include "pic/2.4.typ",
+      image("pic/builds/2.4.pdf"),
       caption: [Pair Production的Feynman图示例],
     )
   - Bhabha scattering
@@ -207,7 +207,7 @@ $
       e^+ e^- -> e^+ e^-
     $
     #figure(
-      include "pic/2.5.typ",
+      image("pic/builds/2.5.pdf"),
       caption: [Bhabha scattering的Feynman图示例],
     )
     - 这个过程在树级有两张典型图：
@@ -223,7 +223,7 @@ $
       e^- gamma -> e^- gamma
     $
     #figure(
-      include "pic/2.6.typ",
+      image("pic/builds/2.6.pdf"),
       caption: [Compton scattering的Feynman图示例],
     )
     - s-道图
@@ -238,7 +238,7 @@ $
   - 上面的图都是树图（tree-level diagram），即没有闭合环路的图
   - 还有一些图包含闭合环路，称为高阶图（loop diagram）
     #figure(
-      include "pic/2.7.typ",
+      image("pic/builds/2.7.pdf"),
       caption: [高阶图示例],
     )
   - 高阶图对应着更高阶的微扰展开，通常贡献较小，但在某些情况下可能非常重要，例如：
@@ -289,13 +289,13 @@ $
 - *其他带电粒子的电磁相互作用*
   - 内线外线可以是其他夸克或者其他带电轻子（$mu$，$tau$等）
     #figure(
-      include "pic/2.8.typ",
+      image("pic/builds/2.8.pdf"),
       caption: [其他带电粒子的电磁相互作用示例],
     )
   - 例如：$pi^0 -> gamma gamma$ 实际上是一对夸克$u macron(u)$或$d macron(d)$的湮灭过程
     - 中间的虚粒子只能是$u$或$d$夸克，因为顶角$u macron(e) gamma$不存在，$u$和$e$没有直接的电磁耦合
     #figure(
-      include "pic/2.12.typ",
+      image("pic/builds/2.12.pdf"),
       caption: [$pi^0 -> gamma gamma$的Feynman图示例],
     )
 
@@ -308,13 +308,13 @@ $
   - *夸克→夸克+胶子*
     - $q macron(q) g$
       #figure(
-        include "pic/2.9.typ",
+        image("pic/builds/2.9.pdf"),
         caption: [$q macron(q) g$顶点示例],
       )
   - 相互作用顶角是$alpha_s$
   - 夸克间的散射过程通过胶子来完成
     #figure(
-      include "pic/2.10.typ",
+      image("pic/builds/2.10.pdf"),
       caption: [$q macron(q) -> q macron(q)$的Feynman图示例],
     )
 
@@ -324,11 +324,11 @@ $
   - 胶子是色-反色态，夸克是单色态，在相互作用中颜色可以交换，但总的颜色保持不变
 - 量子色动力学的顶角结构使得*颜色在相互作用中发生交换，但不改变味道和电荷*
   #figure(
-    include "pic/2.11.typ",
+    image("pic/builds/2.11.pdf"),
     caption: [颜色交换$q(#t-r($r$)) -> q(#t-b($b$)) + g(#t-r($r$)#t-b-inv($macron(b)$))$的Feynman图示例],
   )
   #figure(
-    include "pic/2.13.typ",
+    image("pic/builds/2.13.pdf"),
     caption: [颜色交换$q(#t-b($b$)) -> q(#t-r($r$)) + g(#t-b($b$)#t-r-inv($macron(r)$))$的Feynman图示例],
   )
 
@@ -336,12 +336,12 @@ $
 - 除了夸克之间的相互作用，QCD还包含胶子之间的自相互作用，这是QCD与QED的一个重要区别
 - 三胶子顶点
   #figure(
-    include "pic/2.14.typ",
+    image("pic/builds/2.14.pdf"),
     caption: [三胶子顶点的Feynman图示例],
   )
 - 四胶子顶点
   #figure(
-    include "pic/2.15.typ",
+    image("pic/builds/2.15.pdf"),
     caption: [四胶子顶点的Feynman图示例],
   )
 - 光子不带电荷，没有光子的自相互作用
@@ -368,7 +368,7 @@ $
     - 因为靠近真实电子的位置，虚正电子偏多，它们会部分抵消真实电子的电场向外的表现，这就是*屏蔽效应*，使得在较大距离上观察到的电荷比真实电荷更小
     - 真空极化图（vacuum polarization loop）
       #figure(
-        include "pic/2.16.typ",
+        image("pic/builds/2.16.pdf"),
         caption: [电磁相互作用的真空极化图示例],
       )
       所以光子的传播不再是简单传播：过程中，会产生虚电子对
@@ -393,7 +393,7 @@ $
       - 胶子本身带色荷，所以胶子也能极化真空
       - *胶子自相互作用*起到反屏蔽作用，增强色荷
     #figure(
-      include "pic/2.17.typ",
+      image("pic/builds/2.17.pdf"),
       caption: [胶子自相互作用的真空极化图示例——胶子环],
     )
 
@@ -405,14 +405,14 @@ $
 - 无法找到单独的夸克，即*实验上找不到无单独的色荷*
 - 只有无色的介子和重子
   #figure(
-    include "pic/2.18.typ",
+    image("pic/builds/2.18.pdf"),
     caption: [质子质子散射，这个图看起来像交换了$pi$介子，前后都是无色的],
   )
 - 强子散射中的$pi$交换与产生
   - 在强子的相互作用中，我们经常使用$pi$交换，或者使用$pi$作为媒介粒子考虑问题
   - Yukawa理论
     #figure(
-      include "pic/2.19.typ",
+      image("pic/builds/2.19.pdf"),
       caption: [Yukawa理论示例],
     )
     - 在核子层次上，我们把核力近似理解成：
@@ -427,7 +427,7 @@ $
       - 两个强子内部的夸克重新重组
       - 通过强相互作用把一个$u macron(d)$对从一个核子传到另一个核子
       #figure(
-        include "pic/2.20.typ",
+        image("pic/builds/2.20.pdf"),
         caption: [从夸克层面看$pi^+$交换的Feynman图示例],
       )
 - *夸克禁闭*
@@ -436,8 +436,241 @@ $
 
 == 弱作用
 
+*弱相互作用*是描述：带电轻子、中性轻子和夸克的衰变以及味道变化的量子场论。其基本思想是弱作用是由$W$和$Z$玻色交换产生的作用。
+
+只要有中微子参与，几乎一定是弱作用；而很多粒子种类改变的衰变，也都是弱作用。
+
+例如：
+- $beta$衰变，K壳层电子俘获
+  $
+    ch("^A_Z X") -> ch("^A_(Z+1) Y") + beta^- + macron(nu)_e
+  $
+- $mu$衰变
+  $
+    mu^- -> e^- + macron(nu)_e + nu_mu
+  $
+- $pi^+, pi^-$衰变
+  $
+    pi^+ -> mu^+ + nu_mu, pi^- -> mu^- + macron(nu)_mu
+  $
+所有*涉及中微子*的过程。
+
+弱相互作用是*唯一能够改变粒子味道*（flavor）的相互作用。带电轻子、中性轻子和夸克的衰变都由弱相互作用介导。
+
+它们分成两类：
++ $Z$Boson交换的*中性流过程*
+  - 电荷为 0
+  - 对应*中性流过程*（neutral current）
++ $W$Boson交换的*带电流过程*
+  - 电荷为 $plus.minus 1$
+  - 对应*带电流过程*（charged current）
+
+=== 中性流过程
+
+*中性流过程*：交换$Z_0$的过程
+
+- 基础顶角：
+  #figure(
+    image("pic/builds/2.21.pdf"),
+    caption: [中性流过程$Z^0$顶点示例],
+  )
+- 其中$f$是任意Fermion，可以是轻子也可以是夸克
+  - 任何一对夸克和反夸克即可形成一个$Z$
+  - 任何一对正反轻子也可以形成一个$Z$
+- 必须是同类型的粒子对
+  $
+    Z -> f macron(f), f = e, u, nu,...
+  $
+- $Z$交换过程有一个最核心的性质：*不改变粒子的电荷，也通常不改变粒子种类。*
+
+*中性流过程示例*
+- 中微子和电子散射
+  $
+    nu_e + e^- -> nu_e + e^-
+  $
+- 中微子和质子散射
+  $
+    nu + d -> nu + d
+  $
+  两个$u$夸克为旁观夸克，只是维持强子结构，不直接参与该顶点
+
+*中性流过程与光子过程*
+-如果某种顶角允许，那么某些由光子交换完成的散射，在原则上也可能由$Z$交换完成
+但由于$Z$的质量很大（90GeV），所以幅度很小
+- 所以弱相互作用和电磁相互作用可以同时存在，但在大多数情况下，电磁相互作用占主导地位，弱相互作用的贡献被抑制了
+- $mu$和电子散射
+  $
+    mu^- + e^- -> mu^- + e^-
+  $
+  - $Z$为媒介粒子
+  - 光子为媒介粒子
+
+
+=== 带电流过程
+
+*带电流过程*：轻子
+- 基础顶角：
+
+- 带电的$W^+$或者$W^-$：可以连接一个带电轻子和对应味道的中微子
+- $mu$和$tau$的衰变过程
+  $
+    mu^- -> e^- + macron(nu)_e + nu_mu
+  $
+  $
+    tau^- -> mu^- + macron(nu)_mu + nu_tau
+  $
+
+*带电流过程*：夸克
+- 基础顶角：
+- 带电的$W^+$或者$W^-$：连接一对夸克，分别带$2/3$和$1/3$的电荷
+- 味道变化
+  - $d$和$s$可以变成$u$，$s$和$b$可以变成$c$，但$d$不能直接变成$c$，这是因为顶角里没有$d macron(c) W$的耦合
+  - 这种味道变化的规律由*Cabibbo-Kobayashi-Maskawa矩阵*描述
+
+*带电流过程*：强子衰变
+
+- 末态混合了强子和轻子
+  $
+    n -> p + e^- + macron(nu)_e
+  $
+- 纯强子的弱衰变
+  $
+    Delta^0 -> p + pi^-
+  $
+
+*味道代系的改变*
+- $W$连接的两个夸克可以来自于两代夸克
+  - 例如$s$和$u$夸克
+
+    pion decay
+    $
+      pi^-(d macron(u)) -> mu^- + macron(nu)_mu
+    $
+    kaon decay
+    $
+      K^-(s macron(u)) -> mu^- + macron(nu)_mu
+    $
+
+*CKM矩阵*
+- *强*相互作用相关是夸克的*质量本征态*
+- *弱*相互作用相关是夸克的*味道本征态*
+- 夸克的*质量和味道本征态不重合*，有混合现象
+- 用一个矩阵来描述这种混合关系，这就是*Cabibbo-Kobayashi-Maskawa矩阵*，简称CKM矩阵
+  $
+    mat(d'; s'; b') = mat(
+      V_(u d), V_(u s), V_(u b);
+      V_(c d), V_(c s), V_(c b);
+      V_(t d), V_(t s), V_(t b)
+    ) mat(d; s; b)
+  $
+- 弱相互作用带电流
+- 同代夸克跃迁最强，隔代弱，隔两代更弱
+- 弱相互作用的上型夸克可写成$u, c, t$，下型真正和 W 耦合的是$d', s', b'$，它们是$d, s, b$的线性组合
+- 例子：K介子
+  - 奇异粒子在强相互作用中成对产生，例如K0和𝚲粒子，强相互作用s夸克的本征态，有一部分味道本征态s’夸克，一些u’夸克，因此K0可以衰变到不含奇异数的p介子
+
+*其他的W和Z的耦合顶点*
+
 
 == 衰变与守恒定律
 
+*电荷、颜色、重子数、轻子数、味道*
+#figure(
+  three-line-table[
+    | 相互作用    | 耦合对象  | 改颜色  | 改味道     | 改电荷  | 改重子数 (B) | 改轻子数 (L) |
+    | ------- | ----- | ---- | ------- | ---- | -------- | -------- |
+    | QCD（强）  | 色荷    |  会  |  不会    |  不会 |  不会     |  不会     |
+    | QED（电磁） | 电荷    |  不会 |  不会    |  不会 |  不会     |  不会     |
+    | 弱中性流（Z） | 弱中性耦合 |  不会 | （基本不变） |  不会 |  不会     |  不会     |
+    | 弱带电流（W） | 弱同位旋  |  不会 |  会     |  会  |  不会     |  不会（总数） |
+  ],
+  caption: [不同相互作用的耦合对象和性质],
+)
+- *重子数守恒，轻子数守恒*
+  - 质子$p$，中子$n$等正粒子的重子数都为$1$，介子的重子数为$0$，轻子的重子数为$0$
+  - 质子$p$，中子$n$的轻子数都为$0$，介子的轻子数为$0$，正轻子的轻子数为$1$
+- *电子，$mu$子数定义*
+  - 电子数$L_e$
+    - $e^-, nu_e$的$L_e=1$，$e^+, macron(nu)_e$的$L_e=-1$，其他粒子的$L_e=0$
+  - $mu$数$L_mu$
+    - $mu^-, nu_mu$的$L_mu=1$，$mu^+, macron(nu)_mu$的$L_mu=-1$，其他粒子的$L_mu=0$
+  - $tau$数$L_tau$
+    - $tau^-, nu_tau$的$L_tau=1$，$tau^+, macron(nu)_tau$的$L_tau=-1$，其他粒子的$L_tau=0$
+  - 只用轻子数不能解释更广泛的实验观测结果，要更细化
+  - 实验上发现允许的跃迁或衰变：
+    $
+            & K^+ & -> & mu^+ + & nu_mu \
+      L_mu: & 0   &    & -1     &       & 1 \
+    $
+- 强和电磁作用什么都不改（除了动量、颜色），弱作用才负责“变种类”，但即便如此，电荷、重子数、轻子数仍然守恒。
+
+*$J\/psi$的奇特之处*
+- 共振态的寿命与宽度
+  $
+    Gamma = 1/tau
+  $
+- 总宽度和分宽度
+  $
+    Gamma = sum_i Gamma_i
+  $
+- 分支比
+  $
+    "BR"_i = Gamma_i / Gamma
+  $
+- 粒子的质量有展宽，服从Breit-Wigner分布
+- $omega$和$phi$
+  #figure(
+    three-line-table[
+      | 粒子 | 质量 (MeV) | 宽度 (MeV) | 到$3pi$的分宽度 |
+      | --- | --- | --- | --- |
+      | $omega$ | 783 | 8.68 | 7.7 |
+      | $phi$ | 1019 | 4.249 | 0.65 |
+      | $J\/psi$ | 3097 | 0.0929 | \ |
+    ],
+    caption: [$omega$、$phi$和$J\/psi$的质量、宽度和分宽度比较],
+  )
+  - $phi -> 3pi$
+    $
+      phi(s macron(s)) -> pi^+(u macron(d)) + pi^-(d macron(u)) + pi^0((u macron(u) - d macron(d))/sqrt(2))
+    $
+    湮灭后，在真空中产生三对夸克，这个过程是强相互作用的典型衰变
+  - $omega -> 3pi$
+    $
+      omega((u macron(u) + d macron(d))/sqrt(2)) -> pi^+(u macron(d)) + pi^-(d macron(u)) + pi^0((u macron(u) - d macron(d))/sqrt(2))
+    $
+    在真空中产生两对夸克，要比$phi -> 3pi$更容易发生，所以$omega$的宽度更大
+
+  一般情况下，质量越大，衰变的相空间越大，可能性也越多，宽度应该越大。
+
+  但$J\/psi$的宽度却非常窄，说明它的衰变被强烈抑制了，这就是所谓的*OZI规则*，它是由于$J\/psi$是一个由$c macron(c)$组成的态，而轻子和轻夸克无法直接耦合到这个态上，所以它只能通过弱相互作用或者多重胶子交换来衰变，因此寿命非常长，宽度非常窄。
+
+- *OZI规则，或者叫做Zweig规则*
+  - 初末态夸克线不连接的衰变概率要比连接的图形小得多
+    - 也就是说初末态有连接的夸克线，衰变更容易发生
+    - 否则要有三胶子交换，较难
+  - 背后的原因是胶子线的数量和所需的能量
+
 
 == 统一方案
+
+*电弱统一理论*(Glashow-Weinberg-Salam模型) 1979年诺贝尔
+物理学奖
+- 电弱统一理论是描述电磁相互作用和弱相互作用的统一框架
+- 基于$"SU"(2)_L times U(1)_Y$的规范对称性
+- 从同一个理论出发，有四个无质量的媒介粒子，通过Higgs机制自发对称性破缺，产生$W^+, W^-$和$Z^0$的质量，同时保留$gamma$无质量
+
+*强与电弱理论统一？大统一理论猜测？*
+- 从跑动的耦合常数来看：
+  - 电耦合常数在增加
+  - 强耦合常数在减小
+  - 在$10^15$GeV合并在一起
+  - 我们碰巧生活在一个低能标下
+- 目前还没有实验证据表明强相互作用和电弱相互作用在更高能标下会统一，但这是一个重要的理论问题，许多物理学家正在研究这个问题，寻找可能的统一方案，例如大统一理论（GUT）或者超对称理论（SUSY）。
+- 大统一理论是存在的，有各种样式，$"SU"(5)$，$"SU"(10)$，Supersymmetry等
+  - 色荷和电荷会有可能不守恒，夸克和轻子的界限会模糊，质子可能衰变
+  - 预言：
+    $
+      p^+ -> e^+ + pi^0\
+      p^+ -> pi^+ + mu
+    $
+    在实验上还没有任何的证据

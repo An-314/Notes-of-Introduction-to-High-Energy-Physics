@@ -40,6 +40,8 @@ make
 * `main.pdf`（完整课程笔记）
 * 各次作业的 PDF 文件（`HW/i.pdf`）
 
+同时会在 `pic/builds/` 下生成各图片源文件 `pic/*.typ` 对应的 PDF（用于章节内引用）。
+
 ### 生成单次作业
 
 进入对应作业目录（若存在子 Makefile）：
