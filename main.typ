@@ -16,6 +16,8 @@
 #pagebreak()
 #include "chap2.typ"
 #pagebreak()
+#include "chap3.typ"
+#pagebreak()
 #outline(target: figure.where(kind: table), title: [表格索引])
 #outline(target: figure.where(kind: image), title: [图像索引])
 
