@@ -391,7 +391,58 @@ $
   $
   在$theta$方向的概率为
   $
-    P(theta) = a^2 cos^2(theta/2) + b^2 sin^2(theta/2) = beta(1 + alpha cos theta)
+    P(theta) = a^2 cos^2(theta/2) + b^2 sin^2(theta/2) = (a^2 + b^2)/2 + (a^2-b^2)/2 cos theta = beta(1 + alpha cos theta)
   $
+  这里是概率相加，而不是振幅相加，这是因为末态粒子是不可区分的，无法干涉
 
 == 角分布的Lorenz变换
+
+问题：$Lambda -> p + pi^-$、，已知末态$p$在$Λ$质心系中的角分布，$Λ$在实验室系中以一定的速度运动，以该运动方向为$x$轴，求质子在实验室系的角分布。
+
+角分布的变换
+- 质心系
+  $
+    W(theta^*, phi^*)\
+    integral W(theta^*, phi^*) dd(Omega^*) = 1
+  $
+- 实验室系
+  $
+    W(theta, phi)\
+    integral W(theta, phi) dd(Omega) = 1
+  $
+有关系
+$
+           W(theta, phi) dd(Omega) & = W(theta^*, phi^*) dd(Omega^*) \
+  W(theta, phi) dd(cos theta, phi) & = W(theta^*, phi^*) dd(cos theta^*, phi^*)
+$
+在两个参考系，选Lorentz变换方向取$phi$角：
+$
+  dd(phi) = dd(phi^*)
+$
+则有
+$
+  W(theta, phi) = W(theta^*, phi^*) dv(cos theta^*, cos theta)
+$
+其中
+$
+  p^*_x & = gamma (p_x - beta E) & ==> & p^* cos theta^* & = gamma (p cos theta - beta E) \
+    E^* & = gamma (E - beta p_x) & ==> & E^*             & = gamma (E - beta p cos theta)
+$
+质心系中的$E^*$和$p^*$应该与实验室系速度无关
+$
+  dv(E^*, cos theta) = dv(p^*, cos theta) = 0
+$
+都对$cos theta$求微分，
+$
+  p^* dv(cos theta^*, cos theta) & = gamma (p + cos theta dv(p, cos theta) - beta p/E dv(p, cos theta)) \
+                               0 & = gamma (p/E dv(p, cos theta) - beta p - beta cos theta dv(p, cos theta)) \
+$
+则有
+$
+  dv(cos theta^*, cos theta) = p^2/(gamma p^*(p - beta E cos theta))
+$
+从而
+$
+  W(theta, phi) = W(theta^*, phi^*) p^2/(gamma p^*(p - beta E cos theta))
+$
+应把$p,E$表示为$p^*, E^*$的函数。
