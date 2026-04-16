@@ -115,11 +115,11 @@ $
 $
 $"SU"(2)$变换后，$U phi$将保持该复数对的模长平方和不变，即$"SU"(2)$变换完成了旋量的转动。$"SU"(2)$也可以用Euler角来表征，三个参数
 $
-  u(alpha, beta, gamma) = u_1 (alpha) u_2 (beta) u_3 (gamma)
+  u(alpha, beta, gamma) = u_3 (alpha) u_2 (beta) u_3 (gamma)
 $
 其中
 $
-  u_1 (alpha) = mat(e^(i alpha/2), 0; 0, e^(-i alpha/2)), u_2 (beta) = mat(cos(beta/2), sin(beta/2); -sin(beta/2), cos(beta/2)), u_3 (gamma) = mat(cos (gamma/2), - i sin(gamma/2); - i sin(gamma/2), cos(gamma/2))
+  u_1 (alpha) = mat(cos alpha/2, -i sin alpha/2; -i sin alpha/2, cos alpha/2), u_2 (beta) = mat(cos beta/2, - sin beta/2; sin beta/2, cos beta/2), u_3 (gamma) = mat(e^(- i gamma/2), 0; 0, e^(i gamma/2))
 $
 生成元是Pauli矩阵
 $
@@ -138,7 +138,7 @@ $
 $
 有对应关系
 $
-  u_1(alpha) vb(sigma) u^dagger_1 (alpha) = U^dagger_z (alpha) vb(sigma)
+  u_3(alpha) vb(sigma) u^dagger_3 (alpha) = U^dagger_z (alpha) vb(sigma)
 $
 #newpara()
 
