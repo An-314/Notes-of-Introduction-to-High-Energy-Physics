@@ -149,7 +149,7 @@ $
     numbering: none,
   )
   左侧是$J^P = 0^-$赝标介子，右侧是$J^P = 1^-$矢量介子
-- 两张图的区别主要来自夸克和反夸克自旋如何耦合
+- 左右两张图的区别主要来自夸克和反夸克自旋如何耦合
   - 所以同样的味道组合，比如$u macron(d)$，自旋反平行可以给出$pi^+$，自旋平行可以给出$rho^+$
 
 === 重子排列
@@ -197,6 +197,7 @@ $
   $
     3 times.o macron(3) = 8 plus.o 1
   $
+  *下面考虑$"SU"(3)$的不可约表示分解*
   $
     M = q macron(q) = mat(u macron(u), u macron(d), u macron(s); d macron(u), d macron(d), d macron(s); s macron(u), s macron(d), s macron(s))
   $
@@ -244,23 +245,84 @@ $
         $
           eta_8 = (u macron(u) + d macron(d) - 2 s macron(s))/sqrt(6) tilde lambda_8
         $
+#note(subname: [$"SU"(3)$的基本表示])[
+  $"SU"(3)$的生成元是Gell-Mann矩阵$T_a = lambda_a/2$，都是$3 times 3$的无迹Hermitian矩阵
+  $
+    lambda_1 = mat(0, 1, 0; 1, 0, 0; 0, 0, 0), lambda_2 = mat(0, -i, 0; i, 0, 0; 0, 0, 0), lambda_3 = mat(1, 0, 0; 0, -1, 0; 0, 0, 0)\
+    lambda_4 = mat(0, 0, 1; 0, 0, 0; 1, 0, 0), lambda_5 = mat(0, 0, -i; 0, 0, 0; i, 0, 0)\
+    lambda_6 = mat(0, 0, 0; 0, 0, 1; 0, 1, 0), lambda_7 = mat(0, 0, 0; 0, 0, -i; 0, i, 0)\ lambda_8 = 1/sqrt(3) mat(1, 0, 0; 0, 1, 0; 0, 0, -2)
+  $
+  $"SU"(3)$有两个对角生成元$lambda_3$和$lambda_8$，它们的本征值可以用来标记$"SU"(3)$的表示
+  - $lambda_3$的本征值对应同位旋$I_3$
+    $
+      I_3 = lambda_3/2
+    $
+  - $lambda_8$的本征值对应超荷$Y$
+    $
+      Y = lambda_8/sqrt(3)
+    $
+  对应$"SU"(2)$的本征值是$J_3$，$"SU"(3)$的本征值是$I_3$和$Y$，它们可以用来标记$"SU"(3)$的表示
 
-  $"SU"(3)$的基本表示
+  $"SU"(2)$的权图是一维的
   $
-    u = mat(1; 0; 0),
+    m = -j, -j + 1, ..., j
   $
+  $"SU"(3)$的权图是二维的
+  - 八重态的权图是一个六边形加一个中心点
+  - 单态的权图是一个点
+
+  $"SU"(3)$的基本表示是$3$维表示，作用在$3$维向量空间上；我们把$u,d,s$看成是这个空间的三个基矢量
+  $
+    u = mat(1; 0; 0), d = mat(0; 1; 0), s = mat(0; 0; 1)
+  $
+  有本征值关系
+  $
+    I_3 u = 1/2 u, I_3 d = -1/2 d, I_3 s = 0\
+    Y u = 1/3 u, Y d = 1/3 d, Y s = -2/3 s
+  $
+  这给出了$u,d,s$的同位旋和超荷（权图）
+  $
+    u = (1/2, 1/3), d = (-1/2, 1/3), s = (0, -2/3)
+  $
+  介子八重态权图就由其中每个成员的$I_3$和$Y$坐标构成
+  #figure(
+    three-line-table[
+      | 粒子         | ket       | 权 $(I_3,Y)$ |
+      | ---------- | --------- | ----------- |
+      | $pi^+$    | $u macron(d)$ | $(1,0)$       |
+      | $pi^0$    | 组合        | $(0,0)$       |
+      | $pi^-$    | $d macron(u)$ | $(-1,0)$      |
+      | $K^+$      | $u macron(s)$ | $(1/2,1)$     |
+      | $K^0$      | $d macron(s)$ | $(-1/2,1)$    |
+      | $K^-$      | $s macron(u)$ | $(-1/2,-1)$   |
+      | $macron(K)^0$ | $s macron(d)$ | $(1/2,-1)$    |
+      | $eta_8$   | 组合        | $(0,0)$       |
+    ],
+    caption: [轻介子八重态的权图],
+  )
+  #figure(
+    three-line-table[
+      | 粒子         | ket       | 权 $(I_3,Y)$ |
+      | ---------- | --------- | ----------- |
+      | $eta_1$   | 对称组合        | $(0,0)$       |
+    ],
+    caption: [轻介子单态的权图],
+  )
+]
+
 - 三个夸克，$s$的质量明显大于$u$的夸克，$"SU"(3)$的对称性并不完美
   - 赝标介子
     $
       eta = (u macron(u) + d macron(d) - 2 s macron(s))/sqrt(6)\
       eta' = (u macron(u) + d macron(d) + s macron(s))/sqrt(3)
     $
+    它们是$"SU"(3)$的八重态和单态
   - 矢量介子
     $
       omega = (u macron(u) + d macron(d))/sqrt(2)\
       phi = s macron(s)
     $
-    它们是$"SU"(3)$的八重态和单态混合，成分经由实验测得
+    它们是$"SU"(3)$的八重态和单态的混合态
   #figure(
     image("pic/builds/1.2.pdf", width: 80%),
     numbering: none,
@@ -277,7 +339,7 @@ $
 - 我们认为味道只是夸克的一个属性，尤其是轻夸克$u,d,s$，有$"SU"(3)$对称性
   - 我们认为颜色也是夸克的一个属性
   - 夸克还有自旋，上下两个属性
-- 我们要考虑重子波函数的交换对称性问题；全同Fermion系统，交换反对称
+- 我们要考虑重子波函数的*交换对称性问题*；全同Fermion系统，交换反对称
 - 我们把重子的波函数写成
   $
     psi = psi("space") psi("spin") psi("flavor") psi("color")
@@ -316,25 +378,41 @@ $
   $
     3 times.o 3 times.o 3 = 10 plus.o 8 plus.o 8 plus.o 1
   $
+  我们写组合后的波函数为
+  $
+    ket(I\, I_3\, Y)
+  $
+  其中$I$是同位旋，$I_3$是同位旋的第三分量，$Y$是超荷$Y = B + S$，$B$是重子数，$S$是奇异数，其中
+  $
+    u = ket(1/2\, 1/2\, 1/3), d = ket(1/2\, -1/2\, 1/3), s = ket(0\, 0\, -2/3)
+  $
 - 第一组（10），全对称组合
-  $
-     ket(3/2\, 3/2) & = u u u \
-     ket(3/2\, 1/2) & = (u u d + u d u + d u u)/sqrt(3) \
-    ket(3/2\, -1/2) & = (u d d + d u d + d d u)/sqrt(3) \
-    ket(3/2\, -3/2) & = d d d
-  $
-  $
-     ket(1\, 1) & = (d d s + d s d + s d d)/sqrt(3) \
-     ket(1\, 0) & = (u d s + u s d + d u s + d s u + s u d + s d u)/sqrt(6) \
-    ket(1\, -1) & = (u u s + u s u + s u u)/sqrt(3)
-  $
-  $
-     ket(1/2\, 1/2) & = (u s s + s u s + s s u)/sqrt(3) \
-    ket(1/2\, -1/2) & = (d s s + s d s + s s d)/sqrt(3)
-  $
-  $
-    ket(0\, 0) & = s s s
-  $
+  - $Delta: Y=1, I=3/2$
+    $
+      Delta^(++) & = ket(3/2\, 3/2\, 1) =  &                           u u u \
+         Delta^+ & = ket(3/2\, 1/2\, 1) =  & (u u d + u d u + d u u)/sqrt(3) \
+         Delta^0 & = ket(3/2\, -1/2\, 1) = & (u d d + d u d + d d u)/sqrt(3) \
+         Delta^- & = ket(3/2\, -3/2\, 1) = &                           d d d
+    $
+  - $Sigma^*: Y=0, I=1$
+    $
+      Sigma^(*+) & = ket(1\, 1\, 0)  &                         = (u u s + u s u + s u u)/sqrt(3) \
+      Sigma^(*0) & = ket(1\, 0\, 0)  & = (u d s + u s d + d u s + d s u + s u d + s d u)/sqrt(6) \
+      Sigma^(*-) & = ket(1\, -1\, 0) &                         = (d d s + d s d + s d d)/sqrt(3) \
+    $
+  - $Xi^*: Y=-1, I=1/2$
+    $
+      Xi^(*0) & = ket(1/2\, 1/2\, -1)  & = (u s s + s u s + s s u)/sqrt(3) \
+      Xi^(*-) & = ket(1/2\, -1/2\, -1) & = (d s s + s d s + s s d)/sqrt(3)
+    $
+  - $Omega: Y=-2, I=0$
+    $
+      Omega^- & = ket(0\, 0\, -2) & = s s s
+    $
+  #figure(
+    image("pic/2026-05-07-23-51-04.png", width: 80%),
+    caption: [重子十重态的权图],
+  )
 - 第二、三组（8+8），混合对称性组合
   - 8个1-2交换反对称态
     $
