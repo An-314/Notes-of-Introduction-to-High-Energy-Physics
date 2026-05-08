@@ -269,3 +269,90 @@ $
   vb(S) = hbar/2 vb(Sigma) = hbar/2 mat(vb(sigma), O; O, vb(sigma))
 $
 可以检验$u^((1))$不是$Sigma_z$的本征态。只有在$z$轴指向运动方向$p_x=p_y=0$时，$u^((1)), u^((2)), v^((1)), v^((2))$才是本征态：$u^((1))$和$v^((1))$是自旋上的态，$u^((2))$和$v^((2))$是自旋下的态。
+
+=== 双线性协变量
+
+如果你变到一个以速度。在$x$方向运动的系统
+$
+  psi => psi' = S psi
+$
+其中$S$是如下$4 times 4$矩阵
+$
+  S = a_+ + a_- gamma^0 gamma^1 = mat(a_+, a_- sigma_1; a_- sigma_1, a_+) = mat(a_+, 0, 0, a_-; 0, a_+, a_-, 0; 0, a_-, a_+, 0; a_-, 0, 0, a_+)
+$
+其中
+$
+  a_plus.minus = plus.minus sqrt(1/2(gamma plus.minus 1))
+$
+#newpara()
+
+如果我们要用旋量$psi$构造一个标量，合理的做法是试验如下表达式
+$
+  psi^dagger psi = mat(psi_1^*, psi_2^*, psi_3^*, psi_4^*) mat(psi_1; psi_2; psi_3; psi_4) = abs(psi_1)^2 + abs(psi_2)^2 + abs(psi_3)^2 + abs(psi_4)^2
+$
+这不是不变的
+$
+  (psi^dagger psi)' = psi^dagger S^dagger S psi != psi^dagger psi
+$
+其中
+$
+  S^dagger S = S^2 = gamma mat(1, - beta sigma_1; - beta sigma_1, 1) != I
+$
+当然，四矢量元素的平方和也同样不是不变的；引入伴随旋量
+$
+  overline(psi) = psi^dagger gamma^0 = psi^dagger mat(I, O; O, -I) = mat(psi_1^*, psi_2^*, - psi_3^*, - psi_4^*)
+$
+从而
+$
+  overline(psi) psi = psi^dagger gamma^0 psi = abs(psi_1)^2 + abs(psi_2)^2 - abs(psi_3)^2 - abs(psi_4)^2
+$
+是一个*相对论不变量*，因为
+$
+  S^dagger gamma^0 S = gamma^0
+$
+#newpara()
+
+我们通过宇称变换下的行为
+$
+  P: vb(r) -> - vb(r), t -> t
+$
+来区分标量和赝标量。震标量改变符号；标量不改变符号
+$
+  P: psi -> gamma^0 psi
+$
+从而
+$
+  (overline(psi) psi)' = overline(psi) gamma^0 gamma^0 psi = overline(psi) psi
+$
+因此$overline(psi) psi$是一个*标量*。相反考虑
+$
+  overline(psi) gamma^5 psi
+$
+其中
+$
+  gamma^5 = i gamma^0 gamma^1 gamma^2 gamma^3 = mat(O, I; I, O)
+$
+它是Lorentz不变的
+$
+  (overline(psi) gamma^5 psi)' = psi^* S^dagger gamma^0 gamma^5 S psi = overline(psi) gamma^5 psi
+$
+但在宇称变换下改变符号
+$
+  (overline(psi) gamma^5 psi)' = (psi')^dagger gamma^0 gamma^5 gamma^0 psi = psi^dagger gamma^0 gamma^0 gamma^5 gamma^0 psi = - overline(psi) gamma^5 psi
+$
+事实上有$gamma^5$和$gamma^mu$的反对易关系
+$
+  {gamma^5, gamma^mu} = 0
+$
+#newpara()
+
+由于$i$与$j$的取值均为$1$至$4$，所以共有$16$种形式的$psi_i^* psi_j$积(取一个分量的$psi_i^*$，而取另一个分量的$psi_j$)。这$16$种积可以被组合成各种线性组合来构造不同的变换行为，如下
+- 标量：$overline(psi) psi$，$1$个分量
+- 赝标量：$overline(psi) gamma^5 psi$，$1$个分量
+- 矢量：$overline(psi) gamma^mu psi$，$4$个分量
+- 赝矢量：$overline(psi) gamma^5 gamma^mu psi$，$4$个分量
+- 反对称张量：$overline(psi) sigma^(mu nu) psi$，$6$个分量，其中
+  $
+    sigma^(mu nu) = i/2 [gamma^mu, gamma^nu] = i/2 (gamma^mu gamma^nu - gamma^nu gamma^mu)
+  $
+$1, gamma^5, gamma^mu, gamma^mu gamma^5, sigma^(mu nu)$组成所有$4 times 4$矩阵空间的一组基。
