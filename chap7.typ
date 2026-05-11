@@ -56,7 +56,21 @@ $
 $
   -1/c^2 pdv(Psi, t, 2) + laplacian Psi = ((m c)/hbar)^2 Psi
 $
+该方程的解包含了正能态和负能态两种情况
+- 正能解
+  $
+    E = p_0 = omega = sqrt(p^2 + m^2)\
+    phi^+ = e^(- i omega t + i vb(p) dot vb(x))
+  $
+- 负能解
+  $
+    E = p_0 = - omega = - sqrt(p^2 + m^2)\
+    phi^- = e^(i omega t + i vb(p) dot vb(x))
+  $
+Klein-Gordon方程用于标量场
 #newpara()
+
+Dirac方程是Klein-Gordon方程的进阶版：描述旋量场$s = 1/2$，也有正能、负能解，描述Fermion:$e, tau, mu, q$
 
 对于没有空间分量即，$vb(p)=0$，动能关系为
 $
@@ -270,6 +284,14 @@ $
 $
 可以检验$u^((1))$不是$Sigma_z$的本征态。只有在$z$轴指向运动方向$p_x=p_y=0$时，$u^((1)), u^((2)), v^((1)), v^((2))$才是本征态：$u^((1))$和$v^((1))$是自旋上的态，$u^((2))$和$v^((2))$是自旋下的态。
 
+Dirac的理解是
+1. 真空已经被负能态的粒子填满了
+2. Pauli不相容原理，正能电子不可能再跃迁到负能态去了
+3. 真空上被激发一个电子，会留下一个空穴，即一个“反粒子”
+反粒子的性质是
+- 电荷，与电子相反，正电荷
+- 磁矩，与电子相反
+
 === 双线性协变量
 
 如果你变到一个以速度。在$x$方向运动的系统
@@ -356,3 +378,147 @@ $
     sigma^(mu nu) = i/2 [gamma^mu, gamma^nu] = i/2 (gamma^mu gamma^nu - gamma^nu gamma^mu)
   $
 $1, gamma^5, gamma^mu, gamma^mu gamma^5, sigma^(mu nu)$组成所有$4 times 4$矩阵空间的一组基。
+
+== 光子
+
+*光子场*
+
+Maxwell方程定义了光子的场方程，也给出了光子的波函数
+$
+  (square + m^2) A^mu = 0
+$
+其中
+$
+  square = pdv(, x^mu) pdv(, x_mu) = 1/c^2 pdv(, t, 2) - laplacian
+$
+解为
+$
+  A_mu (x) = a e^(- i/hbar p dot x) epsilon_mu^((s))
+$
+有无质量
+$
+  p^mu p_mu = 0
+$
+以及Coulomb规范
+$
+  epsilon^0 = 0
+$
+有两种横向极化
+$
+  vb(epsilon)^((1)) = mat(1; 0; 0), vb(epsilon)^((2)) = mat(0; 1; 0)
+$
+
+== QED的Feynman规则
+
+*电子波函数*为
+$
+  psi(x) = a e^(- i/hbar p dot x) u^((s)) (p)
+$
+*正电子波函数*为
+$
+  psi(x) = a e^(i/hbar p dot x) v^((s)) (p)
+$
+其中$s$是自旋状态，取$1,2$；$u,v$分别满足正反粒子的Dirac方程。伴随量分别是
+$
+  macron(u) = u^dagger gamma^0, macron(v) = v^dagger gamma^0
+$
+正交归一性有
+$
+  macron(u^((s))) u^((s')) = 2 m c^2 delta^(s s'), macron(v^((s))) v^((s')) = - 2 m c^2 delta^(s s')
+$
+完备性有
+$
+  sum_(s=1)^2 u^((s)) macron(u^((s))) = gamma^mu p_mu + m c\
+  sum_(s=1)^2 v^((s)) macron(v^((s))) = gamma^mu p_mu - m c
+$
+
+#newpara()
+
+*光子波函数*为
+$
+  A_mu (x) = a e^(- i/hbar p dot x) epsilon_mu^((s))
+$
+其中$s$是自旋状态，取$1,2$；$epsilon_mu^((s))$满足
+$
+  p^mu epsilon_mu^((s)) = 0
+$
+Coulomb规范下
+$
+  epsilon^0 = 0, vb(epsilon) dot vb(p) = 0
+$
+正交归一性有
+$
+  epsilon^((s)) dot epsilon^((s')) = - delta^(s s')
+$
+完备性有
+$
+  sum_(s=1)^2 epsilon_mu^((s)) epsilon_nu^((s)) = delta_(i j) - hat(p)_i hat(p)_j
+$
+#newpara()
+
+现在能给出QED的Feynman规则了，对于振幅$M$的计算：
+- 标记外线（入射和出射）粒子动量$p_1, p_2, ...$，，标记他们的正方向；标记内线粒子动量$q_1, q_2,...$，标记他们的正方向
+- 外线因子
+  - 电子：入射$u$，出射$macron(u)$
+  - 正电子：入射$macron(v)$，出射$v$
+  - 光子：入射$epsilon_mu$，出射$epsilon_mu^*$
+- 内线因子
+  $
+    i g_e gamma^mu
+  $
+  无量纲，其中
+  $
+    g_e = sqrt(4 pi alpha) = e sqrt((4 pi)/(hbar c)))
+  $
+  其中$alpha$是精细结构常数，$e$是电子的电荷
+- 传播子：对每个内线，写下
+  - 电子和正电子
+    $
+      (i (gamma^mu q_mu + m c))/(q^mu q_mu - m^2 c^2)
+    $
+  - 光子
+    $
+      i g_(mu nu)/(q^mu q_mu)
+    $
+- 能动量守恒：每个顶角有$(2 pi)^4 delta^(4)(k_1 + k_2 + k_3)$，其中$k_i$是入射线的动量，$- k_i$是出射线的动量
+- 对每条内线，补充一个因子
+  $
+    integral dd(q_j, 4)/(2 pi)^4
+  $
+  积掉内动量$q$
+- 最终，会有一个全局因子
+  $
+    (2 pi)^4 delta(sum_i q_i)
+  $
+  删去，并乘以$i$，结果为$M$，注意对着图反向沿着每一条Fermion做
+- 反对称化（全同Fermion）
+
+== 例子
+
+$e-mu$散射
+
+这个过程在树图阶段，只有这一个
+$
+  (2pi)^4 integral (overline(u^((s_3))) (p_3) (i g_e gamma^mu) u^((s_1)) (p_1)) (i g_(mu nu))/(q^2) (overline(u^((s_4))) (p_4) (i g_e gamma^nu) u^((s_2)) (p_2)) \
+  delta(p_1 - p_3 - q) delta(p_2 - p_4 + q) dd(q, 4)
+$
+这个积分只需处理一个$delta$函数，使$q$取确定值$p_1-p_3$，去掉整体的$(2pi)^4 delta$函数，并乘以$i$，张量$g_(mu nu)$改变第二项的上下标，并且要求只有$mu = nu$才有非零结果
+$
+  M = (-g_e^2)/(p_1-p_3)^2 (overline(u^((s_3))) (p_3) gamma^mu u^((s_1)) (p_1)) (overline(u^((s_4))) (p_4) gamma_mu u^((s_2)) (p_2))
+$
+其中
+$
+  u^((1)) (p) = N mat(1; 0; c p_3/(E + m c^2); c(p_1 + i p_2)/(E + m c^2))\
+  u^((2)) (p) = N mat(0; 1; c(p_1 - i p_2)/(E + m c^2); - c p_3/(E + m c^2))
+$
+有
+$
+  overline(u) = u^dagger gamma^0
+$
+因此
+$
+  overline(u^((1))) (p) = N mat(1, 0, - (c p_3)/(E + m c^2), - c(p_1 + i p_2)/(E + m c^2))\
+  overline(u^((2))) (p) = N mat(0, 1, - c(p_1 - i p_2)/(E + m c^2), c p_3/(E + m c^2))
+$
+至此，$M$就是可以计算的了
+
