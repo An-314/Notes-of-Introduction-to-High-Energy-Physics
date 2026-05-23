@@ -599,7 +599,7 @@ $
 - 出射粒子：对极化没有判断
 例如一个无极化的正负电子对撞机实验。这样，需要对各种入射自旋组合求平均，对各种出射粒子自旋求和。
 
-*电子-缪子散射*
+*$e$-$mu$散射*
 $
   M = (-g_e^2)/(p_1-p_3)^2 (overline(u^((s_3))) (p_3) gamma^mu u^((s_1)) (p_1)) (overline(u^((s_4))) (p_4) gamma_mu u^((s_2)) (p_2))
 $
@@ -646,7 +646,7 @@ $
 $
   sum_(s_a) sum_(s_b) G = Tr(Gamma_1 (cancel(p)_a + m_a c) overline(Gamma)_2 (cancel(p)_a + m_a c))
 $
-回到电子-缪子散射
+回到$e$-$mu$散射
 $
   1/4 sum_(s_1, s_2, s_3, s_4) M^2(s_1, s_2, s_3, s_4) =& g_e^4/(p_1-p_3)^4 Tr(gamma^mu (cancel(p)_1 + m c) gamma^nu (cancel(p)_3 + m c)) Tr(gamma_mu (cancel(p)_2 + m c) gamma_nu (cancel(p)_4 + m c))\
   =& (8 g_e^4)/((p_1-p_3)^4) ((p_1 dot p_2)(p_3 dot p_4) + (p_1 dot p_4)(p_2 dot p_3) \
@@ -655,7 +655,7 @@ $
 
 == 截面
 
-莫特和卢瑟福散射
+*Mott和Rutherford散射*
 
 $m$射到$M$靶上，$m<<M$有
 - 碰撞前：$E, vb(p)_1$
@@ -681,10 +681,43 @@ $
 $
   vb(p)_1 dot vb(p)_3 = vb(p)^2 cos theta
 $
+则有
+$
+  (p_1 - p_3)^2 = mat(0; vb(p)_1 - vb(p)_3)^2 = - 4 vb(p)^2 sin^2(theta/2)\
+  p_1 dot p_3 = m c^2 - vb(p)^2 cos theta = m^2 c^2 + 2 vb(p)^2 sin^2(theta/2)\
+  (p_1 dot p_2)(p_3 dot p_4) = (p_1 dot p_4)(p_2 dot p_3) = (M E)^2\
+  p_2 dot p_4 = (M c)^2
+$
+带入振幅的计算公式
+$
+  abs(M)^2 &= (8 g_e^4)/((p_1-p_3)^4) ((p_1 dot p_2)(p_3 dot p_4) + (p_1 dot p_4)(p_2 dot p_3) - (p_1 dot p_3)(M c)^2 - (p_2 dot p_4)(m c)^2 + 2 (m M c^2)^2)\
+  &= (8 g_e^4)/(-4 vb(p)^2 sin^2(theta/2))^2 (2 (M E)^2 + (-m^2 c^2 + 2 vb(p)^2 sin^2(theta/2)) (M c)^2 - (M c)^2 (m c)^2 + 2 (m M c^2)^2) \
+  &= (8 g_e^4)/(-4 vb(p)^2 sin^2(theta/2))^2 (2 (M E)^2 + 2 (M c)^2 vb(p)^2 sin^2(theta/2))\
+  &= (g_e^4 M^2 c^2)/(vb(p)^2 sin^2(theta/2))^2 ((m c)^2 + vb(p)^2 cos^2(theta/2))
+$
+带入截面的计算公式
+$
+  dv(sigma, Omega) & = ((hbar c)/(8 pi))^2 (S abs(M))/(M c^2)^2 \
+  & = ((hbar)/(8 pi))^2 (g_e^4)/(vb(p)^2 sin^2(theta/2))^2 ((m c)^2 + vb(p)^2 cos^2(theta/2)) \
+  & =^(g_e = sqrt(4 pi alpha)) (alpha^2 hbar^2)/(vb(p)^2 sin^2(theta/2))^2 ((m c)^2 + vb(p)^2 cos^2(theta/2)) \
+$
+如果$p^2 << m^2 c^2$
+$
+  dv(sigma, Omega) & = (alpha^2 hbar^2)/(vb(p)^2 sin^2(theta/2))^2 (m c)^2 \
+$
+替换$alpha = (e^2)/(hbar c)$
+$
+  dv(sigma, Omega) & = (e^4)/(2 m vb(v)^2 sin^2(theta/2))^2 \
+$
+这就是Rutherford散射的结果。
 
 == 重整化与跑动耦合常数
 
 电子缪子散射，包括真空极化图，如上一章结尾的分析，会有发散的部分。
+#figure(
+  image("pic/builds/7.6.pdf", width: 70%),
+  caption: [$e$-$mu$散射的树图和真空极化圈图],
+)
 
 树图贡献
 $
@@ -696,7 +729,7 @@ $
 $
 其中
 $
-  I_(mu nu) = - g_e^2 integral dd(k, 4)/(2 pi)^4 Tr(gamma_mu (cancel(k) + m c) gamma_nu (cancel(k) - cancel(q) + m c))/((k^mu k_mu - m^2 c^2)((cancel(k)+cancel(q))^mu (cancel(k)+cancel(q))_mu - m^2 c^2))
+  I_(mu nu) = - g_e^2 integral dd(k, 4)/(2 pi)^4 Tr(gamma_mu (cancel(k) + m c) gamma_nu (cancel(k) - cancel(q) + m c))/((k^mu k_mu - m^2 c^2)((cancel(k)-cancel(q))^mu (cancel(k)-cancel(q))_mu - m^2 c^2))
 $
 具体计算这里略去，有
 $
@@ -723,16 +756,28 @@ $
 $
   g_e^2 (1 - (g_e^2)/(12 pi^2) (ln(M^2/m^2) - f((-q^2)/(m^2 c^2))))
 $
-分别为树图贡献和真空极化圈图贡献，其中有一个发散的部分$ln(M^2/m^2)$，以及一个有限的部分$f((-q^2)/(m^2 c^2))$。我们常见的物理过程$q^2 -> 0$，$f(q^2)->0$，则
+分别为树图贡献和真空极化圈图贡献，其中有一个发散的部分$ln(M^2/m^2)$，以及一个有限的部分$f((-q^2)/(m^2 c^2))$。常见的物理过程$q^2 -> 0$，$f(q^2)->0$，则
 $
   g_e^2 (1 - (g_e^2)/(12 pi^2) ln(M^2/m^2))
 $
-这个结果（除以$4 pi$）应该是我们实验上测量得到的$alpha$（1/137），$g_e^2 = sqrt(4 pi alpha)$。定义重整化后的相互作用强度$g_R^2(M)$为
+这个结果（除以$4 pi$）应该是我们实验上测量得到的$alpha approx 1/137(g_e^2 = sqrt(4 pi alpha))$。定义重整化后的相互作用强度$g_R^2(M)$为
 $
   g_R^2(M) = g_e^2 (1 - (g_e^2)/(12 pi^2) ln(M^2/m^2))\
   g_R^2/(4 pi) = alpha approx 1/137
 $
 下一步利用$g_R^2$重写核心系数，重整化后的系数
 $
+  g_e^2 (1 - (g_e^2)/(12 pi^2) (ln(M^2/m^2) - f((-q^2)/(m^2 c^2)))) = g_R^2 (1 + (g_R^2)/(12 pi^2) f((-q^2)/(m^2 c^2)))
+$
+成立在$g^4$阶，从低能散射实验结果来看：
+$
+  1/137 = g_R^2/(4 pi) = g_e^2/(4 pi) (1 - (g_e^2)/(12 pi^2) ln(M^2/m^2))
+$
+从而$g_e^2$应该是小量，故可以略去$g_e^6$阶及以上的项，所以利用$g_R^2$给出的重整化后系数表达式应该是和原式是相同的
+$
   g_R^2 (1 + (g_R^2)/(12 pi^2) f((-q^2)/(m^2 c^2)))
 $
+- 发散项不见了，被我们暂时藏了起来，取而代之的是实验值$1/137$
+- 当$q$不再是小量的时候，这个系数还会变动，是跑动的耦合常数
+- 对量子电动力学，随着$abs(q^2)$增加，系数会增加
+我们只需引入有限的重整化量即可完成QED的所有过程的计算。

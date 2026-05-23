@@ -12,6 +12,8 @@
   lang: "zh",
 )
 
+#outline(target: figure.where(kind: table), title: [表格索引])
+#outline(target: figure.where(kind: image), title: [图像索引])
 #include "chap1.typ"
 #pagebreak()
 #include "chap2.typ"
@@ -26,6 +28,4 @@
 #pagebreak()
 #include "chap7.typ"
 #pagebreak()
-#outline(target: figure.where(kind: table), title: [表格索引])
-#outline(target: figure.where(kind: image), title: [图像索引])
 
