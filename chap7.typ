@@ -455,6 +455,10 @@ $
   sum_(s=1)^2 epsilon_mu^((s)) epsilon_nu^((s)) = delta_(i j) - hat(p)_i hat(p)_j
 $
 #newpara()
+#figure(
+  image("pic/builds/7.1.pdf", width: 30%),
+  caption: [QED的Feynman规则],
+)
 
 现在能给出QED的Feynman规则了，对于振幅$M$的计算：
 - 标记外线（入射和出射）粒子动量$p_1, p_2, ...$，，标记他们的正方向；标记内线粒子动量$q_1, q_2,...$，标记他们的正方向
@@ -468,7 +472,7 @@ $
   $
   无量纲，其中
   $
-    g_e = sqrt(4 pi alpha) = e sqrt((4 pi)/(hbar c)))
+    g_e = sqrt(4 pi alpha) = e sqrt((4 pi)/(hbar c))
   $
   其中$alpha$是精细结构常数，$e$是电子的电荷
 - 传播子：对每个内线，写下
@@ -495,8 +499,11 @@ $
 
 == 例子
 
-$e-mu$散射
-
+*$e$-$mu$散射*
+#figure(
+  image("pic/builds/7.2.pdf", width: 30%),
+  caption: [$e$-$mu$散射的树图],
+)
 这个过程在树图阶段，只有这一个
 $
   (2pi)^4 integral (overline(u^((s_3))) (p_3) (i g_e gamma^mu) u^((s_1)) (p_1)) (i g_(mu nu))/(q^2) (overline(u^((s_4))) (p_4) (i g_e gamma^nu) u^((s_2)) (p_2)) \
@@ -508,7 +515,7 @@ $
 $
 其中
 $
-  u^((1)) (p) = N mat(1; 0; c p_3/(E + m c^2); c(p_1 + i p_2)/(E + m c^2))\
+  u^((1)) (p) = N mat(1; 0; c p_3/(E + m c^2); c(p_1 + i p_2)/(E + m c^2)),
   u^((2)) (p) = N mat(0; 1; c(p_1 - i p_2)/(E + m c^2); - c p_3/(E + m c^2))
 $
 有
@@ -517,8 +524,215 @@ $
 $
 因此
 $
-  overline(u^((1))) (p) = N mat(1, 0, - (c p_3)/(E + m c^2), - c(p_1 + i p_2)/(E + m c^2))\
+  overline(u^((1))) (p) = N mat(1, 0, - (c p_3)/(E + m c^2), - c(p_1 + i p_2)/(E + m c^2)),
   overline(u^((2))) (p) = N mat(0, 1, - c(p_1 - i p_2)/(E + m c^2), c p_3/(E + m c^2))
 $
-至此，$M$就是可以计算的了
+至此，$M$就是可以计算的了。
 
+*$e$-$e$散射*
+#figure(
+  image("pic/builds/7.3.pdf", width: 70%),
+  caption: [$e$-$e$散射的树图],
+)
+包括两个过程，末态是两个全同Fermion（末态交叉），所以要反对称化；省略了动量和自旋的标识，以粒子标号统一标识
+$
+  M = (-g_e^2)/(p_1-p_3)^2 (overline(u) (3) gamma^mu u (1)) (overline(u) (4) gamma_mu u (2)) + (-g_e^2)/(p_1-p_4)^2 (overline(u) (4) gamma^mu u (1)) (overline(u) (3) gamma_mu u (2))
+$
+
+#newpara()
+*$e$-$e^+$散射*
+#figure(
+  image("pic/builds/7.4.pdf", width: 70%),
+  caption: [$e$-$e^+$散射的树图],
+  numbering: none,
+)
+反向沿着每一条Fermion线进行计算
+- 左图的贡献
+  $
+    (- g_e^2)/(p_1-p_3)^2 (overline(u) (3) gamma^mu u (1)) (overline(v) (2) gamma_mu v (4))
+  $
+- 右图的贡献
+  $
+    (- g_e^2)/(p_1+p_2)^2 (overline(v) (2) gamma^mu u (1)) (overline(u) (3) gamma_mu v (4))
+  $
+交换入射粒子与出射反粒子导致的反对称负号
+$
+  M = (- g_e^2)/(p_1-p_3)^2 (overline(u) (3) gamma^mu u (1)) (overline(v) (2) gamma_mu v (4)) - (- g_e^2)/(p_1+p_2)^2 (overline(v) (2) gamma^mu u (1)) (overline(u) (3) gamma_mu v (4))
+$
+#newpara()
+
+*Comton散射*
+#figure(
+  image("pic/builds/7.5.pdf", width: 80%),
+  caption: [Compton散射的树图],
+)
+- 左图
+  $
+    (2 pi)^4 integral epsilon_mu (2) (overline((u))(4) (i g_e gamma^mu) (i (gamma^nu q_nu + m c))/(q^mu q_mu - m^2 c^2) (i g_e gamma^nu) u (1)) epsilon_nu^* (3)\
+    delta(p_1 - p_3 - q) delta(p_4 - p_2 + q) dd(q, 4)
+  $
+  记
+  $
+    gamma^mu q_mu = cancel(q)
+  $
+  则有
+  $
+    (- i (2pi)^4 g_e^2)/((p_1-p_3)^2 - m^2c^2) (overline(u)(4) cancel(epsilon)_2 (cancel(p)_1 - cancel(p)_3 + m c) cancel(epsilon)_3^* u (1)) delta(p_1 + p_2 - p_3 - p_4)
+  $
+  从而
+  $
+    M_a = g_e^2/((p_1-p_3)^2 - m^2c^2) (overline(u)(4) cancel(epsilon)_2 (cancel(p)_1 - cancel(p)_3 + m c) cancel(epsilon)_3^* u (1))
+  $
+- 右图
+  $
+    M_b = g_e^2/((p_1+p_2)^2 - m^2c^2) (overline(u)(4) cancel(epsilon)_3^* (cancel(p)_1 + cancel(p)_2 + m c) cancel(epsilon)_2 u (1))
+  $
+初末态交换粒子全同，直接相加
+$
+  M = M_a + M_b
+$
+
+== Casimir窍门
+
+上面的计算已经可以进行了，要指定入射粒子的自旋，出射粒子的自旋。大量的实验是这样的情况：
+- 入射粒子：没有极化
+- 出射粒子：对极化没有判断
+例如一个无极化的正负电子对撞机实验。这样，需要对各种入射自旋组合求平均，对各种出射粒子自旋求和。
+
+*电子-缪子散射*
+$
+  M = (-g_e^2)/(p_1-p_3)^2 (overline(u^((s_3))) (p_3) gamma^mu u^((s_1)) (p_1)) (overline(u^((s_4))) (p_4) gamma_mu u^((s_2)) (p_2))
+$
+则有
+$
+  expval(abs(M)^2) = 1/4 sum_(s_1, s_2, s_3, s_4) M^2(s_1, s_2, s_3, s_4)
+$
+对各种入射自旋组合求平均，对各种出射粒子自旋求和；各个$M$中，各种粒子，自旋不同，无干涉现象，$M$平方后相加
+$
+  M(s_1, s_2, s_3, s_4) = (-g_e^2)/(p_1-p_3)^2 (overline(u^((s_3))) (p_3) gamma^mu u^((s_1)) (p_1)) (overline(u^((s_4))) (p_4) gamma_mu u^((s_2)) (p_2))
+$
+则有
+$
+  abs(M)^2 = g_e^4/(p_1-p_3)^4 (overline(u)(3) gamma^mu u (1)) (overline(u) (4) gamma_mu u (2)) (overline(u) (3) gamma^nu u (1))^* (overline(u) (4) gamma_nu u (2))^*
+$
+抽离一个通项$G$（第一、第三项），尝试进行化简
+$
+  G = (overline(u)(a) Gamma_1 u(b)) (overline(u)(a) Gamma_2 u(b))^*
+$
+计算第二项的复共轭
+$
+  G = (overline(u)(a) Gamma_1 u(b)) (overline(u)(b) overline(Gamma)_2 u(a))
+$
+其中
+$
+  overline(Gamma) = gamma^0 Gamma^dagger gamma^0
+$
+显示b的自旋，利用$u overline(u)$的完备性
+$
+  sum_(s_b) G & = sum_(s_b) (overline(u)(a) Gamma_1 u^(s_b)(b)) (overline(u)^(s_b)(b) overline(Gamma)_2 u(a)) \
+              & = overline(u)(a) Gamma_1 (sum_(s_b) u^(s_b)(b) overline(u)^(s_b)(b)) overline(Gamma)_2 u(a) \
+              & = overline(u)(a) Gamma_1 (gamma^mu p_mu + m c) overline(Gamma)_2 u(a) \
+              & = overline(u)(a) cal(O) u(a)
+$
+对a的自旋求和，利用$u overline(u)$的完备性
+$
+  sum_(s_a) sum_(s_b) G & = sum_(s_a) (overline(u)^(s_a)(a) cal(O) u^(s_a)(a)) \
+                        & = Tr(cal(O) sum_(s_a) u^(s_a)(a) overline(u)^(s_a)(a)) \
+                        & = Tr(cal(O) (gamma^mu p_mu + m c)) \
+                        & = Tr(cal(O) (cancel(p)_a + m_a c)) \
+                        & = Tr(Gamma_1 (cancel(p)_a + m_a c) overline(Gamma)_2 (cancel(p)_a + m_a c)) \
+$
+得到Casimir窍门的公式
+$
+  sum_(s_a) sum_(s_b) G = Tr(Gamma_1 (cancel(p)_a + m_a c) overline(Gamma)_2 (cancel(p)_a + m_a c))
+$
+回到电子-缪子散射
+$
+  1/4 sum_(s_1, s_2, s_3, s_4) M^2(s_1, s_2, s_3, s_4) =& g_e^4/(p_1-p_3)^4 Tr(gamma^mu (cancel(p)_1 + m c) gamma^nu (cancel(p)_3 + m c)) Tr(gamma_mu (cancel(p)_2 + m c) gamma_nu (cancel(p)_4 + m c))\
+  =& (8 g_e^4)/((p_1-p_3)^4) ((p_1 dot p_2)(p_3 dot p_4) + (p_1 dot p_4)(p_2 dot p_3) \
+    & - (p_1 dot p_3)(m_mu c)^2 - (p_2 dot p_4)(m_e c)^2 + 2 (m_e m_mu c^2)^2)
+$
+
+== 截面
+
+莫特和卢瑟福散射
+
+$m$射到$M$靶上，$m<<M$有
+- 碰撞前：$E, vb(p)_1$
+- 碰撞后：$E, vb(p)_3, theta$
+质心系两体散射微分截面为
+$
+  dv(sigma, Omega) = ((hbar c)/(8 pi))^2 (S abs(M))/(E_1 + E_2)^2 abs(vb(p)_f)/abs(vb(p)_i)
+$
+靶粒子$M$非常重，入射粒子能动量较小，$E<<M$；有近似：质心系与实验室系（$M$的静止系）趋同
+$
+  abs(vb(p)_f) = abs(vb(p)_i)\
+  E_1 + E_2 = E_1 + M c^2 approx M c^2
+$
+则有
+$
+  dv(sigma, Omega) = ((hbar c)/(8 pi))^2 (S abs(M))/(M c^2)^2
+$
+且有
+$
+  p_1 = mat(E/c; vb(p)_1), p_2 = mat(M c; vb(0)), p_3 = mat(E/c; vb(p)_3), p_4 = mat(M c; vb(0))
+$
+并且
+$
+  vb(p)_1 dot vb(p)_3 = vb(p)^2 cos theta
+$
+
+== 重整化与跑动耦合常数
+
+电子缪子散射，包括真空极化图，如上一章结尾的分析，会有发散的部分。
+
+树图贡献
+$
+  M_1 = - g_e^2 (overline(u)(3) gamma^mu u (1)) g_(mu nu)/q^2 (overline(u) (4) gamma^nu u (2))
+$
+真空极化圈图贡献
+$
+  M_2 = (i g_e^2)/q^4 (overline(u)(3) gamma^mu u (1)) I_(mu nu) (overline(u) (4) gamma^nu u (2))
+$
+其中
+$
+  I_(mu nu) = - g_e^2 integral dd(k, 4)/(2 pi)^4 Tr(gamma_mu (cancel(k) + m c) gamma_nu (cancel(k) - cancel(q) + m c))/((k^mu k_mu - m^2 c^2)((cancel(k)+cancel(q))^mu (cancel(k)+cancel(q))_mu - m^2 c^2))
+$
+具体计算这里略去，有
+$
+  I_(mu nu) = - i g_(mu nu) q^2 I(q^2)
+$
+其中
+$
+  I(q^2) = (g_e^2)/(12 pi^2) (integral_(m^2)^oo dd(z)/z - f((-q^2)/(m^2 c^2)))
+$
+引入一个能标截断$M$
+$
+  I(q^2) = (g_e^2)/(12 pi^2) (ln(M^2/m^2) - f((-q^2)/(m^2 c^2)))
+$
+就有
+$
+  I_(mu nu) = - i g_(mu nu) q^2 (g_e^2)/(12 pi^2) (ln(M^2/m^2) - f((-q^2)/(m^2 c^2)))
+$
+散射过程总的振幅，两个振幅相加
+$
+  M &= M_1 + M_2\
+  &= - g_e^2 (overline(u)(3) gamma^mu u (1)) g_(mu nu)/q^2 (overline(u) (4) gamma^nu u (2)) (1 - (g_e^2)/(12 pi^2) (ln(M^2/m^2) - f((-q^2)/(m^2 c^2))))
+$
+核心系数
+$
+  g_e^2 (1 - (g_e^2)/(12 pi^2) (ln(M^2/m^2) - f((-q^2)/(m^2 c^2))))
+$
+分别为树图贡献和真空极化圈图贡献，其中有一个发散的部分$ln(M^2/m^2)$，以及一个有限的部分$f((-q^2)/(m^2 c^2))$。我们常见的物理过程$q^2 -> 0$，$f(q^2)->0$，则
+$
+  g_e^2 (1 - (g_e^2)/(12 pi^2) ln(M^2/m^2))
+$
+这个结果（除以$4 pi$）应该是我们实验上测量得到的$alpha$（1/137），$g_e^2 = sqrt(4 pi alpha)$。定义重整化后的相互作用强度$g_R^2(M)$为
+$
+  g_R^2(M) = g_e^2 (1 - (g_e^2)/(12 pi^2) ln(M^2/m^2))\
+  g_R^2/(4 pi) = alpha approx 1/137
+$
+下一步利用$g_R^2$重写核心系数，重整化后的系数
+$
+  g_R^2 (1 + (g_R^2)/(12 pi^2) f((-q^2)/(m^2 c^2)))
+$
