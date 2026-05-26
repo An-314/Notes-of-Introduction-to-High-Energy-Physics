@@ -5,7 +5,7 @@
 
 #show: scripst.with(
   title: [高能物理导论],
-  info: [第九次作业],
+  info: [第十次作业],
   author: "Anzreww",
   time: "2026年5月",
 )
