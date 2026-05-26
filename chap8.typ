@@ -84,7 +84,7 @@ $
 $
 这即是标量场的Klein–Gordon方程。
 
-*旋量场的 Klein–Gordon Lagrange量*：旋量场$psi$，它有四个分量，对应自旋$s=1/2$的场。
+*旋量场的 Dirac Lagrange量*：旋量场$psi$，它有四个分量，对应自旋$s=1/2$的场。
 $
   cal(L) = i hbar c overline(psi) gamma^mu partial_mu psi - m c^2 overline(psi) psi
 $
@@ -135,7 +135,7 @@ $
 $
   partial_mu psi -> partial_mu (e^(i theta(x)) psi) = e^(i theta(x)) (partial_mu + i partial_mu theta(x)) psi
 $
-旋量场拉氏量
+旋量场Lagrange量
 $
   cal(L) -> &i hbar c overline(psi) gamma^mu (partial_mu + i partial_mu theta(x)) psi - m c^2 overline(psi) psi\
   &= i hbar c overline(psi) gamma^mu partial_mu psi - m c^2 overline(psi) psi + hbar c overline(psi) gamma^mu psi partial_mu theta(x)
@@ -163,7 +163,7 @@ $
   cal(L) -> i hbar c overline(psi) gamma^mu partial_mu psi - m c^2 overline(psi) psi - q overline(psi) gamma^mu psi partial_mu lambda - q overline(psi) gamma^mu psi (A_mu + partial_mu lambda) \
   = i hbar c overline(psi) gamma^mu partial_mu psi - m c^2 overline(psi) psi - q overline(psi) gamma^mu psi A_mu
 $
-后两项消掉，引入场$A$后新定义的拉氏量在*局域规范变换下不变*，这引入了相互作用。光子场是由局域规范不变性要求出来的。
+后两项消掉，引入场$A$后新定义的Lagrange量在*局域规范变换下不变*，这引入了相互作用。光子场是由局域规范不变性要求出来的。
 
 还需要引入规范场的自由项满足完备性，但$A^mu$本身也应该是一个可以传播的场，所以还要给它加自由项。对于矢量场，考虑Proca Lagrange量
 $
@@ -376,8 +376,7 @@ $
 $
 破坏局域规范不变性。这对光子和胶子没有问题，因为光子、胶子都是无质量的。但对弱相互作用的$W_plus.minus,Z^0$就有问题，因为它们实验上是有质量的。
 
-以往生成Lagrange量和质量项有任意性，基于猜测。局域规范不变性产生了相互作用和规范场，都有了相应的产生规则，例如电磁相互作用QED，强相互作用QCD。很遗憾：局域规范不变性产生的规范场必须是
-无质量的，否则会破坏这种不变性。在势能项的最小值附近展开试试，认为最小值才是真空所在的位置，可能不是原点。
+以往生成Lagrange量和质量项有任意性，基于猜测。局域规范不变性产生了相互作用和规范场，都有了相应的产生规则，例如电磁相互作用QED，强相互作用QCD。很遗憾：局域规范不变性产生的规范场必须是无质量的，否则会破坏这种不变性。在势能项的最小值附近展开试试，认为最小值才是真空所在的位置，可能不是原点。
 
 在标量场的特殊势能项，使得极小值不再在原点
 $
@@ -409,7 +408,15 @@ $
 $
   cal(L) = 1/2 (partial_mu eta) (partial^mu eta) - mu^2 eta^2 plus.minus mu lambda eta^3 - 1/4 lambda eta^4 + 1/4 (mu/lambda)
 $
-其中$- mu^2 eta^2$为质量项，剩下的是新耦合项（三、四相互作用顶角）和常数项。
+其中$- mu^2 eta^2$为质量项，和
+$
+  - 1/2 ((m c)/hbar)^2 eta^2
+$
+比较得到
+$
+  m = sqrt(2) mu hbar/c
+$
+剩下的是新耦合项（三、四相互作用顶角）和常数项。
 
 就是Higgs机制的思想雏形。后面会进一步把这个标量场和局域规范场结合起来。那时不仅标量场自己的涨落会获得质量，规范场$A_mu$也会因为标量场的非零真空期望值而获得质量。
 
