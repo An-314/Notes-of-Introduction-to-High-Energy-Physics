@@ -94,7 +94,7 @@ $
   mu^- -> e^- + nu_mu + overline(nu)_e
 $
 #figure(
-  image("../pic/builds/9.2.pdf", width: 30%),
+  include "pic/12.1.typ",
   caption: [$mu$衰变的Feynman图],
 )
 按照Feynman规则，写出振幅的表达式
@@ -256,13 +256,31 @@ $
 $
 其中$$是$"SU"(2)$生成元的单态表示，实际上为$0$。
 
-我们依然假设轻子的电荷及弱同位旋第三分量满足关系
+夸克左手二重态为
+$
+  q_L^i = mat(u_(i L); d'_(i L)) = hat(L) q^i
+$
+其中$d'_(i L)$是弱相互作用的夸克态，和质量本征态$d_(i L)$之间有Cabibbo-Kobayashi-Maskawa矩阵$V$的关系
+$
+  d'_(i L) = V_(i j) d_(j L)
+$
+右手夸克场为单态
+$
+  u_R^i = hat(R) u^i, d'_R^i = hat(R) d'^i
+$
+#newpara()
+
+我们依然假设轻子和夸克的电荷及弱同位旋第三分量满足关系
 $
   Q = I_3 + Y/2
 $
 其中$Y$为弱超荷，$I_3$为弱同位旋第三分量
-- 对于左手二重态，$I_3$的取值为$1/2, -1/2$，$Y(l_L^i) = -1$
-- 对于右手单态，$I_3 = 0$，$Y(l_R^i) = -2$
+- 对于左手二重态，$I_3$的取值为$1/2, -1/2$
+  - $Y(l_L^i) = -1$
+  - $Y(q_L^i) = 1/3$
+- 对于右手单态，$I_3 = 0$
+  - $Y(l_R^i) = -2$
+  - $Y(u_R^i) = 4/3, Y(d'^i_R) = -2/3$
 
 假设弱电相互作用在$"SU"(2)L times "U"(1)_Y$群变换下保持不变，$L$代表左手场，$Y$代表弱超荷，则根据Yang-Mills理论，必有相应的$"SU"(2)$和$"U"(1)$规范场存在
 $
@@ -271,3 +289,48 @@ $
   & + overline(l)_R^i i gamma^mu (partial_mu - i g'/2 Y B_mu) l_R^i \
   & + overline(u)_R^i i gamma^mu (partial_mu - i g'/2 Y B_mu) u_R^i + overline(d')_R^i i gamma^mu (partial_mu - i g'/2 Y B_mu) d'_R^i
 $
+其中$g,g'$是$"SU"(2)$和$"U"(1)$的耦合常数。
+
+协变导数，其中$T^j = tau^j/2$
+$
+  D_mu &= partial_mu - i g tau^j/2 A_mu^j - i g'/2 Y B_mu\
+  &= partial_mu - i/2 mat(g A_mu^3 + g' Y B_mu, g (A_mu^1 - i A_mu^2); g (A_mu^1 + i A_mu^2), - g A_mu^3 + g' Y B_mu)\
+  &= partial_mu - i/2 mat(g A_mu^3 + g' Y B_mu, g sqrt(2) W_mu^+; g sqrt(2) W_mu^-, - g A_mu^3 + g' Y B_mu)
+$
+其中
+$
+  W_mu^(plus.minus) = (A_mu^1 minus.plus i A_mu^2)/sqrt(2)
+$
+在保持定域规范不变的Lagrange量中规范场都是无质量的，而实际上传递弱相互作用 的中间Boson$W$是有质量的，将通过真空自发破缺制机获得质量。现中性矢量$A^3_mu, B_mu$都不是质量本征态，其本征态
+$
+  A_mu & = cos theta A_mu^3 + sin theta B_mu \
+  Z_mu & = - sin theta A_mu^3 + cos theta B_mu
+$
+其中$theta$是Weinberg角，满足
+$
+  sin theta = g'/sqrt(g^2 + g'^2), cos theta = g/sqrt(g^2 + g'^2)
+$
+整理有
+$
+  D_mu &= partial_mu - i/2 mat((g sin theta + Y g' cos theta) A_mu + (g cos theta - Y g' sin theta) Z_mu, g sqrt(2) W_mu^+; g sqrt(2) W_mu^-, (- g sin theta + Y g' cos theta) A_mu + (- g cos theta - Y g' sin theta) Z_mu)\
+  & = partial_mu - i/2 mat(g sin theta (1 + Y) A_mu + g (cos^2 theta - Y sin^2 theta)/(cos theta) Z_mu, g sqrt(2) W_mu^+; g sqrt(2) W_mu^-, g sin theta (Y - 1) A_mu - g (cos^2 theta + Y sin^2 theta)/(cos theta) Z_mu)
+$
+代入不同的场
+$
+  cal(L)_"FG" = & overline(l)_L^i i gamma^mu partial_mu l_L^i + overline(l)_L^i gamma^mu mat(g/(2 cos theta) Z_mu, g/sqrt(2) W_mu^+; g/sqrt(2) W_mu^-, - g/(2 cos theta) Z_mu + g sin theta A_mu) l_L^i \
+  & + overline(q)_L^i i gamma^mu partial_mu q_L^i + overline(q)_L^i gamma^mu mat(2/3 g sin theta A_mu + g (cos^2 theta - 1/3 sin^2 theta)/(2 cos theta) Z_mu, g/sqrt(2) W_mu^+; g/sqrt(2) W_mu^-, - 1/3 g sin theta A_mu - g (cos^2 theta + 1/3 sin^2 theta)/(2 cos theta) Z_mu) q_L^i \
+  & + overline(l)_R^i i gamma^mu partial_mu l_R^i + overline(l)_R^i gamma^mu (- g sin theta A_mu + g (sin^2 theta)/(cos theta) Z_mu) l_R^i \
+  & + overline(u)_R^i i gamma^mu partial_mu u_R^i + overline(u)_R^i gamma^mu (2/3 g sin theta A_mu - 2/3 g (sin^2 theta)/(cos theta) Z_mu) u_R^i \
+  & + overline(d')_R^i i gamma^mu partial_mu d'_R^i + overline(d')_R^i gamma^mu (- 1/3 g sin theta A_mu + 1/3 g (sin^2 theta)/(cos theta) Z_mu) d'_R^i\
+  =& overline(nu)_(L i) i gamma^mu partial_mu nu_(L i) + overline(l)_i i gamma^mu partial_mu l_i + overline(u)_i i gamma^mu partial_mu u_i + overline(d')_i i gamma^mu partial_mu d'_i \
+  & + g/(2 sqrt(2)) (overline(l)_i gamma^mu (1 - gamma_5) nu_i + overline(d')_i gamma^mu (1 - gamma_5) u_i) W_mu^-\
+  & + g/(2 sqrt(2)) (overline(nu)_i gamma^mu (1 - gamma_5) l_i + overline(u)_i gamma^mu (1 - gamma_5) d'_i) W_mu^+ \
+  & + g/(4 cos theta) (overline(nu)_i gamma^mu (1 - gamma_5) nu_i + overline(l)_i gamma^mu (-(1 - 4 sin^2 theta) + gamma_5) l_i \
+    & + overline(u)_i gamma^mu ((1 - 8/3 sin^2 theta) - gamma_5) u_i + overline(d')_i gamma^mu ((-1 + 4/3 sin^2 theta) + gamma_5) d'_i) Z_mu\
+  & + g sin theta (- overline(l)_i gamma^mu l_i + 2/3 overline(u)_i gamma^mu u_i - 1/3 overline(d')_i gamma^mu d'_i) A_mu
+$
+其中
+- 前四项为轻子和夸克的动能项
+- 第五六项为弱带电流项，传递这种相互作用的是带电中间Boson$W^plus.minus$，这两项互为Hermitian共轭，描述Fermion与带电中间Boson之间的相互作用
+- 第七项为弱中性流项，传递这种相互作用的是电中性间中Boson子$Z^0$，这是定域非Abel规范理论所预言的弱相互作用的一种新的形式。
+规范理论说明弱相互作用不只是由带电流引起，也可以由中性流引起，弱相互作用下粒子的电荷状态也可以不发生改变。
