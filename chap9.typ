@@ -62,6 +62,10 @@ $
 $
   nu_mu + e^- -> mu^- + nu_e
 $
+#figure(
+  image("pic/builds/9.1.pdf", width: 30%),
+  caption: [逆$mu$衰变的Feynman图],
+)
 虽然现实中不容易实现，但计算简单；按照Feynman规则，写出振幅的表达式
 $
   M = g_w^2/(8 (M_W c)^2) (overline(u)(3) gamma^mu (1 - gamma^5) u(1)) (overline(u)(4) gamma_mu (1 - gamma^5) u(2))
@@ -94,7 +98,10 @@ $
   mu^- -> e^- + nu_mu + overline(nu)_e
 $
 相空间复杂，但是没有圈图，不需要重整化，树图就很精确；可以简化成4点Fermi相互作用。
-
+#figure(
+  image("pic/builds/9.2.pdf", width: 30%),
+  caption: [$mu$衰变的Feynman图],
+)
 振幅形式和逆$mu$衰变几乎一样：
 $
   M = g_w^2/(8 (M_W c)^2) (overline(u)(3) gamma^mu (1 - gamma^5) u(1)) (overline(u)(4) gamma_mu (1 - gamma^5) v(2))
@@ -377,7 +384,7 @@ $
   cal(L) = & overline(u)_i i gamma^mu partial_mu u_i + overline(d)_i i gamma^mu partial_mu d_i \
   & + g/(2 sqrt(2)) overline(d')_i gamma^mu (1 - gamma^5) u_i W_mu^- + g/(2 sqrt(2)) overline(u)_i gamma^mu (1 - gamma^5) d'_i W_mu^+\
   & + g/(4 cos theta_W) overline(u)_i gamma^mu ((1 - 8/3 sin^2 theta_W) - gamma^5) u_i Z_mu + g/(4 cos theta_W) overline(d')_i gamma^mu ((1 - 4/3 sin^2 theta_W) - gamma^5) d'_i Z_mu\
-  &+ g sin theta_W (2/3 overline(u)_i gamma^mu u_i - 1/3 overline(d)_i gamma^mu d_i) A_mu
+  &+ g sin theta_W (2/3 overline(u)_i gamma^mu u_i - 1/3 overline(d')_i gamma^mu d'_i) A_mu
 $
 其中Weinberg角$theta_W$的数值由实验测量得到
 $
@@ -405,7 +412,7 @@ $
   - $A: u->u gamma, d->d gamma$
   - 它是
     $
-      e (2/3 overline(u)_i gamma^mu u_i - 1/3 overline(d)_i gamma^mu d_i) A_mu
+      e (2/3 overline(u)_i gamma^mu u_i - 1/3 overline(d')_i gamma^mu d'_i) A_mu
     $
     这正是普通 QED 形式
     $
