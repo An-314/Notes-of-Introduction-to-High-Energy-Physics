@@ -31,3 +31,5 @@
 #include "chap8.typ"
 #pagebreak()
 #include "chap9.typ"
+#pagebreak()
+#include "chap10.typ"
