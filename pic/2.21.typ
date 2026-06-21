@@ -13,6 +13,6 @@
     vertex("Z", label: $Z$),
     edge("f", "v", type: "fermion"),
     edge("fbar", "v", type: "antifermion"),
-    edge("v", "Z", type: "boson"),
+    edge("v", "Z", type: "scalar"),
   ),
 )

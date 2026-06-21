@@ -21,6 +21,8 @@ BUILD_DIR := builds
 
 MAIN_SRC := main.typ
 MAIN_PDF := $(BUILD_DIR)/main.pdf
+SUMMARY_SRC := summary.typ
+SUMMARY_PDF := $(BUILD_DIR)/summary.pdf
 
 CHAPS := $(wildcard chap*.typ)
 
@@ -33,10 +35,14 @@ HW_PDF := $(patsubst HW/%.typ,$(BUILD_DIR)/HW/%.pdf,$(HW_SRC))
 
 .PHONY: all clean
 
-all: $(PIC_PDF) $(MAIN_PDF) $(HW_PDF)
+all: $(PIC_PDF) $(MAIN_PDF) $(SUMMARY_PDF) $(HW_PDF)
 
 # 编译主文档
 $(MAIN_PDF): $(MAIN_SRC) $(CHAPS) $(PIC_PDF)
+	$(call MKDIR_P,$(dir $@))
+	typst compile $< $@
+
+$(SUMMARY_PDF): $(SUMMARY_SRC) $(CHAPS) $(PIC_PDF)
 	$(call MKDIR_P,$(dir $@))
 	typst compile $< $@
 
