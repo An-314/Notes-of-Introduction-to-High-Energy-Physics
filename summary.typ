@@ -15,8 +15,8 @@
 
 #show: scripst.with(
   template: "report",
-  title: [粒子物理导论总结],
-  info: [粒子物理导论大作业],
+  title: [粒子物理导论],
+  info: [标准模型:从对称性到相互作用],
   author: ("Anzreww",),
   time: "二〇二六年六月",
   contents: true,
