@@ -60,4 +60,4 @@ clean:
 	$(call RM_RF,$(BUILD_DIR))
 	$(call RM_RF,pic/builds)
 
-include ./notes.mk
+-include ./notes.mk
