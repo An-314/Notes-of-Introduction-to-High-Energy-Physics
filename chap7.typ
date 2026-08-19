@@ -1,5 +1,5 @@
-#import "@preview/scripst:1.1.1": *
-#import "@preview/physica:0.9.8": *
+#import "@preview/scripst:1.1.2": *
+
 #import "@preview/chemformula:0.1.2": ch
 #import "@preview/inknertia:0.1.0": feynman
 #import feynman: *
@@ -637,18 +637,18 @@ $
 对a的自旋求和，利用$u overline(u)$的完备性
 $
   sum_(s_a) sum_(s_b) G & = sum_(s_a) (overline(u)^(s_a)(a) cal(O) u^(s_a)(a)) \
-                        & = Tr(cal(O) sum_(s_a) u^(s_a)(a) overline(u)^(s_a)(a)) \
-                        & = Tr(cal(O) (gamma^mu p_mu + m c)) \
-                        & = Tr(cal(O) (cancel(p)_a + m_a c)) \
-                        & = Tr(Gamma_1 (cancel(p)_a + m_a c) overline(Gamma)_2 (cancel(p)_a + m_a c)) \
+                        & = tr(cal(O) sum_(s_a) u^(s_a)(a) overline(u)^(s_a)(a)) \
+                        & = tr(cal(O) (gamma^mu p_mu + m c)) \
+                        & = tr(cal(O) (cancel(p)_a + m_a c)) \
+                        & = tr(Gamma_1 (cancel(p)_a + m_a c) overline(Gamma)_2 (cancel(p)_a + m_a c)) \
 $
 得到Casimir窍门的公式
 $
-  sum_(s_a) sum_(s_b) G = Tr(Gamma_1 (cancel(p)_a + m_a c) overline(Gamma)_2 (cancel(p)_a + m_a c))
+  sum_(s_a) sum_(s_b) G = tr(Gamma_1 (cancel(p)_a + m_a c) overline(Gamma)_2 (cancel(p)_a + m_a c))
 $
 回到$e$-$mu$散射
 $
-  1/4 sum_(s_1, s_2, s_3, s_4) M^2(s_1, s_2, s_3, s_4) =& g_e^4/(p_1-p_3)^4 Tr(gamma^mu (cancel(p)_1 + m c) gamma^nu (cancel(p)_3 + m c)) Tr(gamma_mu (cancel(p)_2 + m c) gamma_nu (cancel(p)_4 + m c))\
+  1/4 sum_(s_1, s_2, s_3, s_4) M^2(s_1, s_2, s_3, s_4) =& g_e^4/(p_1-p_3)^4 tr(gamma^mu (cancel(p)_1 + m c) gamma^nu (cancel(p)_3 + m c)) tr(gamma_mu (cancel(p)_2 + m c) gamma_nu (cancel(p)_4 + m c))\
   =& (8 g_e^4)/((p_1-p_3)^4) ((p_1 dot p_2)(p_3 dot p_4) + (p_1 dot p_4)(p_2 dot p_3) \
     & - (p_1 dot p_3)(m_mu c)^2 - (p_2 dot p_4)(m_e c)^2 + 2 (m_e m_mu c^2)^2)
 $
@@ -729,7 +729,7 @@ $
 $
 其中
 $
-  I_(mu nu) = - g_e^2 integral dd(k, 4)/(2 pi)^4 Tr(gamma_mu (cancel(k) + m c) gamma_nu (cancel(k) - cancel(q) + m c))/((k^mu k_mu - m^2 c^2)((cancel(k)-cancel(q))^mu (cancel(k)-cancel(q))_mu - m^2 c^2))
+  I_(mu nu) = - g_e^2 integral dd(k, 4)/(2 pi)^4 tr(gamma_mu (cancel(k) + m c) gamma_nu (cancel(k) - cancel(q) + m c))/((k^mu k_mu - m^2 c^2)((cancel(k)-cancel(q))^mu (cancel(k)-cancel(q))_mu - m^2 c^2))
 $
 具体计算这里略去，有
 $

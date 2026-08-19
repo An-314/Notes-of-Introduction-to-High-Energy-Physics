@@ -1,5 +1,5 @@
-#import "@preview/scripst:1.1.1": *
-#import "@preview/physica:0.9.8": *
+#import "@preview/scripst:1.1.2": *
+
 #import "@preview/inknertia:0.1.0": feynman
 #import feynman: *
 
@@ -8,6 +8,8 @@
   info: [第十次作业],
   author: "Anzreww",
   time: "2026年5月",
+  matheq-depth: 1,
+  cb-counter-depth: 1,
 )
 
 #exercise(subname: [7.26])[
@@ -115,7 +117,7 @@
 #exercise(subname: [7.38])[
   + 从方程
     $
-      expval(abs(M)^2) =& g_e^4/(p_1-p_3)^4 Tr(gamma^mu (cancel(p)_1 + m c) gamma^nu (cancel(p)_3 + m c)) Tr(gamma_mu (cancel(p)_2 + m c) gamma_nu (cancel(p)_4 + m c))\
+      expval(abs(M)^2) =& g_e^4/(p_1-p_3)^4 tr(gamma^mu (cancel(p)_1 + m c) gamma^nu (cancel(p)_3 + m c)) tr(gamma_mu (cancel(p)_2 + m c) gamma_nu (cancel(p)_4 + m c))\
       =& (8 g_e^4)/((p_1-p_3)^4) ((p_1 dot p_2)(p_3 dot p_4) + (p_1 dot p_4)(p_2 dot p_3) \
         & - (p_1 dot p_3)(m_mu c)^2 - (p_2 dot p_4)(m_e c)^2 + 2 (m_e m_mu c^2)^2)
     $

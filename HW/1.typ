@@ -1,11 +1,12 @@
-#import "@preview/scripst:1.1.1": *
-#import "@preview/physica:0.9.8": *
+#import "@preview/scripst:1.1.2": *
 
 #show: scripst.with(
   title: [高能物理导论],
   info: [第一次作业],
   author: "Anzreww",
   time: "2026年3月",
+  matheq-depth: 1,
+  cb-counter-depth: 1,
 )
 
 #exercise(subname: [1.1])[

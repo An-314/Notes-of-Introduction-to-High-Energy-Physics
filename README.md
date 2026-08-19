@@ -18,6 +18,7 @@
 ├── pic                    # 图片资源目录
 ├── chapX.typ              # 笔记章节 Typst 源文件
 ├── main.typ               # 笔记主 Typst 源文件
+├── summary.typ            # 小结 Typst 源文件
 ├── makefile               # 顶层 Makefile，用于统一构建
 ├── builds                 # 编译输出目录（生成的 PDF）
 ├── .gitignore             # Git 忽略文件
@@ -85,7 +86,7 @@ typst c i.typ i.pdf
   * 引入
 
     ```typst
-    #import "@preview/scripst:1.1.1": *
+    #import "@preview/scripst:1.1.2": *
     ```
 
 

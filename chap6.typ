@@ -1,5 +1,5 @@
-#import "@preview/scripst:1.1.1": *
-#import "@preview/physica:0.9.8": *
+#import "@preview/scripst:1.1.2": *
+
 #import "@preview/chemformula:0.1.2": ch
 #import "@preview/inknertia:0.1.0": feynman
 #import feynman: *
@@ -461,6 +461,6 @@ $
 $
 $M$会有项
 $
-  integral^oo 1/q^4 q^3 dd(q) = eval(ln q)^oo
+  integral^oo 1/q^4 q^3 dd(q) = evaluated(ln q)^oo
 $
 振幅$M$的计算在圈图中是发散的，趋于无穷大。这是粒子物理学理论上的一个困难，我们将在下一章解决这个问题。

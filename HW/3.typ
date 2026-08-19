@@ -1,5 +1,5 @@
-#import "@preview/scripst:1.1.1": *
-#import "@preview/physica:0.9.8": *
+#import "@preview/scripst:1.1.2": *
+
 #import "@preview/inknertia:0.1.0": feynman
 #import feynman: *
 
@@ -8,6 +8,8 @@
   info: [第三次作业],
   author: "Anzreww",
   time: "2026年3月",
+  matheq-depth: 1,
+  cb-counter-depth: 1,
 )
 
 #exercise(subname: [2.1])[

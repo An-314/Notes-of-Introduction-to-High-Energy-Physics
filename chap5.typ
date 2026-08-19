@@ -213,7 +213,7 @@ $
   $
   - 单态：$M_1$
     $
-      Tr(M) = u macron(u) + d macron(d) + s macron(s)
+      tr(M) = u macron(u) + d macron(d) + s macron(s)
     $
     单态是
     $

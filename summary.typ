@@ -1,5 +1,5 @@
-#import "@preview/scripst:1.1.1": *
-#import "@preview/physica:0.9.8": *
+#import "@preview/scripst:1.1.2": *
+
 #import "@preview/chemformula:0.1.2": ch
 #import "@preview/inknertia:0.1.0": feynman
 #import feynman: *
@@ -23,6 +23,8 @@
   content-depth: 3,
   matheq-depth: 3,
   lang: "zh",
+  font-size: 12pt,
+  par-leading: 0.8em,
 )
 
 = 从实验到粒子谱

@@ -1,5 +1,4 @@
-#import "@preview/scripst:1.1.1": *
-#import "@preview/physica:0.9.8": *
+#import "@preview/scripst:1.1.2": *
 #import "@preview/inknertia:0.1.0": feynman
 #import feynman: *
 
@@ -8,6 +7,8 @@
   info: [第十二次作业],
   author: "Anzreww",
   time: "2026年6月",
+  matheq-depth: 1,
+  cb-counter-depth: 1,
 )
 
 #exercise(subname: [])[
@@ -103,7 +104,7 @@ $
 $
 其中$u, v$分别是中微子和反中微子的自旋函数。对自旋求和，使用Casimir's trick，得到
 $
-  sum_"spin" abs(M)^2 = & (g_w^4)/(64 M_W^4 c^4) Tr(gamma^mu (1 - gamma^5) (cancel(p)_1 + m_mu c) gamma_nu (1 - gamma^5) cancel(p)_3) Tr(gamma_mu (1 - gamma^5) (cancel(p)_2 + m_mu c) gamma^nu (1 - gamma^5) cancel(p)_4)\
+  sum_"spin" abs(M)^2 = & (g_w^4)/(64 M_W^4 c^4) tr(gamma^mu (1 - gamma^5) (cancel(p)_1 + m_mu c) gamma_nu (1 - gamma^5) cancel(p)_3) tr(gamma_mu (1 - gamma^5) (cancel(p)_2 + m_mu c) gamma^nu (1 - gamma^5) cancel(p)_4)\
   = & 4 ((g_w)/(M_W c))^4 (p_1 dot p_2) (p_3 dot p_4)
 $
 中微子只有左手的，总振幅减半

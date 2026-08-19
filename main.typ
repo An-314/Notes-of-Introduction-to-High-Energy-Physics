@@ -1,5 +1,5 @@
-#import "@preview/scripst:1.1.1": *
-#import "@preview/physica:0.9.8": *
+#import "@preview/scripst:1.1.2": *
+
 
 #show: scripst.with(
   template: "book",
@@ -7,6 +7,8 @@
   author: ("Anzreww",),
   time: "丙午春夏于清华园",
   contents: true,
+  font-size: 12pt,
+  par-leading: 0.8em,
   content-depth: 3,
   matheq-depth: 3,
   lang: "zh",
@@ -14,6 +16,7 @@
 
 #outline(target: figure.where(kind: table), title: [表格索引])
 #outline(target: figure.where(kind: image), title: [图像索引])
+#pagebreak()
 #include "chap1.typ"
 #pagebreak()
 #include "chap2.typ"
